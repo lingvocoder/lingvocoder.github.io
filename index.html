@@ -1,1 +1,406 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en" style="
+--counter-height: 36px;
+--text-left-offset: 20px;
+--controls-mt: 40px;
+--carousel-mt: 148px;
+--header-bg: #E9DED4;
+--header-height-lg: 700px;
+--header-height-sm: 812px;
+--cta-left-bg: #1F1F1F;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/styles.css">
+    <title>Yandex Crowd Test</title>
+</head>
+<body class="flex h-full">
+<div class="relative flex w-full flex-col">
+    <header class="relative overflow-hidden lg:min-h-[var(--header-height-lg)] min-h-[var(--header-height-sm)] bg-[var(--header-bg)]">
+        <div class="absolute w-full h-full mix-blend-color-burn overflow-hidden z-40">
+            <picture>
+                <source media="(max-width: 640px)"
+                        srcset="assets/mobile/mask_overlay_mobile.png"/>
+                <source media="(min-width: 860px)"
+                        srcset="assets/desktop/mask_overlay_desktop.png"/>
+                <img class="object-cover w-full h-full"
+                     src="assets/desktop/mask_overlay_desktop.png" alt="Текстурный фон напоминающий мрамор"/>
+            </picture>
+        </div>
+        <div class="mx-auto max-w-[1222px] h-full px-5 pt-[18px]">
+            <div class="relative lg:h-9">
+                <a href="#" target="_blank" class="mt-0">
+                    <picture>
+                        <source media="(max-width: 640px)"
+                                srcset="assets/mobile/logo_mobile.png"/>
+                        <source media="(min-width: 860px)"
+                                srcset="assets/desktop/logo_desktop.png"/>
+                        <img class="object-cover w-auto h-full"
+                             src="assets/desktop/logo_desktop.png" alt="Логотип шахматного клуба"/>
+                    </picture>
+                </a>
+            </div>
+            <div class="relative flex flex-col lg:flex-row lg:flex-nowrap">
+                <div class="relative max-w-[542px] z-50">
+                    <h2 class="font-Merriweather uppercase lg:text-6xl lg:leading-[1.1] text-4xl font-normal leading-[1.1] mt-10">
+                        <span class="inline-block whitespace-pre-line">Превратите уездный город</span>
+                        <span class="inline-block lg:ml-[91px] ml-[63px]">в столицу</span>
+                        <span class="inline-block whitespace-pre lg:ml-[38px] ml-6">земного шара</span>
+                    </h2>
+                    <p class="text-lg leading-[1.3] font-Golos font-normal text-center text-yac-jet-100 mt-6">Оплатите
+                        взнос на телеграммы для организации Международного васюкинского турнира по шахматам</p>
+                    <div class="flex flex-row lg:flex-nowrap flex-wrap lg:gap-4 gap-3.5 lg:mt-10 mt-8">
+                        <a href="#"
+                           class=" w-full lg:whitespace-pre-line lg:px-[49px] lg:py-[20px] text-center rounded-full bg-[var(--cta-left-bg)] px-[43px] py-[13px]
+                          text-base leading-[1.3] font-medium text-white hover:bg-yac-sunglow-100 hover:text-[var(--cta-left-bg)] transition ease-in-out duration-200">Поддержать
+                            шахматную мысль</a>
+                        <a href="#"
+                           class="w-full lg:whitespace-pre-line lg:px-[49px] lg:py-[20px] text-center rounded-full lg:bg-transparent px-[13px] py-[13px]
+                          text-base leading-[1.3] lg:border-2 lg:border-[var(--cta-left-bg)] font-medium hover:bg-[var(--cta-left-bg)]
+                          hover:text-white transition ease-in-out duration-200 bg-white/90 text-[var(--cta-left-bg)]">Подробнее
+                            о турнире</a>
+                    </div>
+                </div>
+                <div class="relative lg:-top-[44px] -mt-20 lg:left-[59px]">
+                    <div class="relative h-full w-full">
+                        <picture>
+                            <source media="(max-width: 640px)"
+                                    srcset="assets/mobile/ellipse_mobile.png"/>
+                            <source media="(min-width: 860px)"
+                                    srcset="assets/desktop/ellipse_desktop.png"/>
+                            <img class="lg:scale-[1.0328125] w-full h-auto"
+                                 src="assets/desktop/ellipse_desktop.png" alt="Круг желтого цвета"/>
+                        </picture>
+                    </div>
+                    <div class="absolute left-0 top-0 h-auto w-full animate-rotate mix-blend-overlay z-20"
+                         style="--rotation-duration: 30000ms;">
+                        <picture>
+                            <source media="(max-width: 640px)"
+                                    srcset="assets/mobile/circle-text_mobile.png"/>
+                            <source media="(min-width: 860px)"
+                                    srcset="assets/desktop/circle-text_desktop.png"/>
+                            <img class="scale-[1.18] lg:transform-none w-full h-auto"
+                                 src="assets/desktop/circle-text_desktop.png" alt="Текст по кругу"/>
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute w-full h-full top-0 z-30">
+            <picture>
+                <source media="(max-width: 640px)"
+                        srcset="assets/mobile/city_mobile.png"/>
+                <source media="(min-width: 860px)"
+                        srcset="assets/desktop/city_desktop.png"/>
+                <source media="(min-width: 1440px)"
+                        srcset="assets/desktop/city_desktop_xl.png"/>
+                <img class="absolute bottom-0 object-cover w-full  h-auto"
+                     src="assets/desktop/city_desktop.png" alt="Город"/>
+            </picture>
+        </div>
+        <div class="absolute w-auto h-auto -bottom-[2%] left-1/2 -translate-x-1/2 lg:left-[68%] lg:bottom-[1%] scale-[1.1] z-40">
+            <picture>
+                <source media="(max-width: 640px)"
+                        srcset="assets/mobile/kon-white_mobile.png"/>
+                <source media="(min-width: 860px)"
+                        srcset="assets/desktop/kon-white_desktop.png"/>
+                <img class="object-cover w-full h-auto"
+                     src="assets/desktop/kon-white_desktop.png" alt="Шахматная фигура"/>
+            </picture>
+        </div>
+        <div class="absolute w-auto h-auto bottom-[14%] left-[15%] lg:left-[54%] lg:bottom-[27%] z-20">
+            <picture>
+                <source media="(max-width: 640px)"
+                        srcset="assets/mobile/ferz-l_mobile.png"/>
+                <source media="(min-width: 860px)"
+                        srcset="assets/desktop/ferz-l_desktop.png"/>
+                <img class="object-cover w-full h-auto"
+                     src="assets/desktop/ferz-l_desktop.png" alt="Шахматная фигура"/>
+            </picture>
+        </div>
+        <div class="absolute w-auto h-auto bottom-[21%] left-[59%] lg:left-[78%] lg:bottom-[43%] z-20">
+            <picture>
+                <source media="(max-width: 640px)"
+                        srcset="assets/mobile/ferz-r_mobile.png"/>
+                <source media="(min-width: 860px)"
+                        srcset="assets/desktop/ferz-r_desktop.png"/>
+                <img class="object-cover w-full h-auto"
+                     src="assets/desktop/ferz-r_desktop.png" alt="Шахматная фигура"/>
+            </picture>
+        </div>
+        <div class="absolute hidden lg:block w-auto h-auto bottom-[21%] left-[59%] lg:left-[91%] lg:bottom-[3%]  z-40">
+            <img class="object-cover w-full h-auto" src="assets/desktop/peshka_desktop.png" alt="Шахматная фигура"/>
+        </div>
+    </header>
+    <main class="relative">
+        <div class="relative group flex overflow-hidden bg-yac-red-100 font-Merriweather font-normal text-white uppercase flex-row" style="--marquee-duration: 12000ms;--bullet-w: 6px;--marquee-py: 18px">
+            <div class="flex shrink-0 justify-around animate-marquee flex-row group-hover:[animation-play-state:paused]">
+                <div class="relative w-auto cursor-pointer overflow-hidden py-[var(--marquee-py)] px-3">
+                    <p class="text-[22px] leading-[1.1]">Дело помощи утопающим&nbsp;&mdash;&nbsp;дело рук самих утопающих!</p>
+                </div>
+                <span class="inline-flex justify-center items-center w-1.5 text-white">&#9679;</span>
+                <div class="relative w-auto cursor-pointer overflow-hidden py-[var(--marquee-py)] px-3">
+                    <p class="text-[22px] leading-[1.1]">Шахматы двигают вперёд не только культуру, но и экономику!</p>
+                </div>
+                <span class="inline-flex justify-center items-center w-1.5 text-white">&#9679;</span>
+                <div class="relative w-auto cursor-pointer overflow-hidden py-[var(--marquee-py)] px-3">
+                    <p class="text-[22px] leading-[1.1]">Лёд тронулся, господа присяжные заседатели!</p>
+                </div>
+                <span class="inline-flex justify-center items-center w-1.5 text-white">&#9679;</span>
+            </div>
+            <div class="flex shrink-0 justify-around animate-marquee flex-row group-hover:[animation-play-state:paused]">
+                <div class="relative w-auto cursor-pointer overflow-hidden py-[var(--marquee-py)] px-3">
+                    <p class="text-[22px] leading-[1.1]">Дело помощи утопающим&nbsp;&mdash;&nbsp;дело рук самих утопающих!</p>
+                </div>
+                <span class="inline-flex justify-center items-center w-1.5 text-white">&#9679;</span>
+                <div class="relative w-auto cursor-pointer overflow-hidden py-[var(--marquee-py)] px-3">
+                    <p class="text-[22px] leading-[1.1]">Шахматы двигают вперёд не только культуру, но и экономику!</p>
+                </div>
+                <span class="inline-flex justify-center items-center w-1.5 text-white">&#9679;</span>
+                <div class="relative w-auto cursor-pointer overflow-hidden py-[var(--marquee-py)] px-3">
+                    <p class="text-[22px] leading-[1.1]">Лёд тронулся, господа присяжные заседатели!</p>
+                </div>
+                <span class="inline-flex justify-center items-center w-1.5 text-white">&#9679;</span>
+            </div>
+        </div>
+        <section class="mt-[120px] mb-[100px]">
+            <div class="lg:grid lg:grid-cols-3 lg:grid-rows-[repeat(10,25px)] mx-auto w-full max-w-[1222px] px-5">
+                <h3 class="lg:col-span-2 z-20 lg:row-start-2 lg:row-end-6 font-Merriweather uppercase text-left lg:text-[36px] text-[28px] leading-[1.35] font-normal mb-6 lg:mb-0">
+                    Чтобы поддержать Международный васюкинский <span class="lg:hidden sm:inline-block">турнир</span>
+                </h3>
+                <div class="lg:col-span-3 z-10 w-auto lg:h-[250px] lg:ml-auto">
+                    <picture>
+                        <source media="(max-width: 640px)"
+                                srcset="assets/mobile/players_mobile.png"/>
+                        <source media="(min-width: 860px)"
+                                srcset="assets/desktop/players_desktop.png"/>
+                        <img class="mx-auto w-auto h-full"
+                             src="assets/desktop/players_desktop.png" alt="Игроки в шахматы"/>
+                    </picture>
+                </div>
+                <h3 class="lg:col-span-2 z-20 lg:row-start-6 lg:row-end-10 font-Merriweather uppercase text-left lg:text-[36px] text-[28px] leading-[1.35] font-normal mt-6 lg:mt-0">
+                    <span class="lg:inline-block hidden">турнир</span> посетите лекцию на тему:
+                    <br><span class="font-bold text-yac-red-100">&laquo;Плодотворная дебютная идея&raquo;</span>
+                </h3>
+            </div>
+        </section>
+        <section class="mt-[120px] mb-[100px]">
+            <div class="flex flex-col lg:flex-row lg:flex-nowrap mx-auto w-full max-w-[1222px] px-5">
+                <div class="relative w-auto h-full">
+                    <div class="relative top-0 w-full h-full mx-auto bg-white">
+                        <picture>
+                            <source media="(max-width: 640px)"
+                                    srcset="assets/mobile/chess_player_mobile_full.png"/>
+                            <source media="(min-width: 860px)"
+                                    srcset="assets/desktop/chess_player_desktop_full.png"/>
+                            <img class=" w-full h-full lg:min-w-[474px]"
+                                 src="assets/desktop/chess_player_desktop_full.png" alt="Игрок в шахматы"/>
+                        </picture>
+                    </div>
+                    <div class="absolute top-0 w-full h-full mx-auto mix-blend-color-burn">
+                        <picture>
+                            <source media="(max-width: 640px)"
+                                    srcset="assets/mobile/bg_chess_player_mobile.png"/>
+                            <source media="(min-width: 860px)"
+                                    srcset="assets/desktop/bg_chess_player_desktop.png"/>
+                            <img class="w-auto h-full" src="assets/desktop/bg_chess_player_desktop.png"
+                                 alt="Игрок в шахматы"/>
+                        </picture>
+                    </div>
+                </div>
+                <div class="flex flex-col flex-grow lg:mt-0 mt-6 border-gray-100">
+                    <h3 class="font-Merriweather uppercase text-left lg:text-[36px] text-[28px] font-normal leading-[1.35] mb-11 lg:mb-[60px]">
+                        и сеанс
+                        <span class="font-bold text-yac-red-100">одновременной игры&nbsp;в шахматы на 160 досках&nbsp;<br>
+                        </span>Гроссмейстера О. Бендера
+                    </h3>
+                    <dl class="divide-y-2 divide-yac-wolf-100">
+                        <div class="sm:divide-x-2 sm:grid lg:grid-cols-[minmax(min-content,290px)_max-content] sm:px-0">
+                            <dt class="text-xl sm:pt-0 pt-4 font-normal text-yac-gray-100 leading-6 sm:leading-10">
+                                Место проведения:
+                            </dt>
+                            <dd class="text-xl sm:pb-0 sm:pl-6 lg:pl-4 pb-4 font-semibold text-yac-jet-100 leading-6 mt-3 sm:leading-10 lg:col-span-1 sm:col-span-2 sm:mt-0">
+                                Клуб «Картонажник»
+                            </dd>
+                        </div>
+                        <div class="sm:divide-x-2 sm:grid lg:grid-cols-[minmax(min-content,290px)_max-content] sm:px-0">
+                            <dt class="text-xl sm:pt-0 pt-4 font-normal text-yac-gray-100 leading-6 sm:leading-[56px]">
+                                Дата и время мероприятия:
+                            </dt>
+                            <dd class="text-xl sm:pb-0 sm:pl-6 lg:pl-4 pb-4 font-semibold text-yac-jet-100 leading-6 mt-3 sm:leading-[56px] lg:col-span-1 sm:col-span-2 sm:mt-0">
+                                22 июня 1927 г. в 18:00
+                            </dd>
+                        </div>
+                        <div class="sm:divide-x-2 sm:grid lg:grid-cols-[minmax(min-content,290px)_max-content] sm:px-0">
+                            <dt class="text-xl sm:pt-0 pt-4 font-normal text-yac-gray-100 leading-6 sm:leading-[56px]">
+                                Стоимость входных билетов:
+                            </dt>
+                            <dd class="text-xl sm:pb-0 sm:pl-6 lg:pl-4 pb-4 font-semibold text-yac-jet-100 leading-6 mt-3 sm:leading-[56px] lg:col-span-1 sm:col-span-2 sm:mt-0">
+                                20 коп.
+                            </dd>
+                        </div>
+                        <div class="sm:divide-x-2 sm:grid lg:grid-cols-[minmax(min-content,290px)_max-content] sm:px-0">
+                            <dt class="text-xl sm:pt-0 pt-4 font-normal text-yac-gray-100 leading-6 sm:leading-[56px]">
+                                Плата за игру:
+                            </dt>
+                            <dd class="text-xl sm:pb-0 sm:pl-6 lg:pl-4 pb-4 font-semibold text-yac-jet-100 leading-6 mt-3 sm:leading-[56px] lg:col-span-1 sm:col-span-2 sm:mt-0">
+                                50 коп.
+                            </dd>
+                        </div>
+                        <div class="sm:divide-x-2 sm:grid lg:grid-cols-[minmax(min-content,290px)_max-content] sm:px-0">
+                            <dt class="text-xl sm:pt-0 pt-4 font-normal text-yac-gray-100 leading-6 sm:leading-10">
+                                Взнос на телеграммы:
+                            </dt>
+                            <dd class="text-xl sm:pb-0 sm:pl-6 lg:pl-4 pb-4 font-semibold text-yac-jet-100 leading-6 mt-3 sm:leading-10 lg:col-span-1 sm:col-span-2 sm:mt-0">
+                                <span class="line-through decoration-yac-red-100">100 руб.</span>&nbsp; 21 руб.
+                                16 коп.
+                            </dd>
+                        </div>
+                    </dl>
+                    <p class="mt-6 lg:mt-12 text-lg leading-[22px] text-yac-blue-100 font-normal">По всем вопросам
+                        обращаться в администрацию к К. Михельсону</p>
+                </div>
+            </div>
+        </section>
+        <section class="mt-[120px] mb-[100px]">
+            <div class="mx-auto w-full max-w-[1222px] px-5">
+                <div class="lg:block hidden" style="--grid-pl:20px;">
+                    <div class="flex flex-col mb-[54px]">
+                        <span class="w-auto font-Merriweather uppercase lg:text-[54px] font-normal leading-[1.2]">Этапы преображения</span>
+                        <div>
+                            <span class="w-auto font-Merriweather uppercase lg:text-[54px] font-normal leading-[1.2]">Васюков</span>
+                            <span class="font-Golos inline-block w-[280px] ml-4 text-xl leading-[1.2] text-yac-blue-100 font-normal">Будущие источники обогащения васюкинцев</span>
+                        </div>
+                    </div>
+                    <div class="grid gap-5 row-auto font-Golos auto-rows-[minmax(112px,1fr)] grid-cols-[repeat(3,minmax(375px,1fr))]">
+                        <div class="relative bg-[url('../../assets/common/CooperUnionStampPaper_tall.png'),url('../../assets/desktop/bg_chess_player_desktop.png')] pl-[calc(var(--counter-height)+var(--grid-pl))] py-5 pr-5 before:absolute before:flex before:items-center before:font-semibold before:text-xl before:leading-[1.2] before:top-5 before:left-5 before:justify-center before:content-['1'] before:w-9 before:h-9 before:rounded-full before:bg-white">
+                            <p class="ml-4 text-left text-xl leading-6 font-medium">Строительство железнодорожной
+                                магистрали Москва-Васюки</p>
+                        </div>
+                        <div class="relative bg-[url('../../assets/common/CooperUnionStampPaper_tall.png'),url('../../assets/desktop/bg_chess_player_desktop.png')] pl-[calc(var(--counter-height)+var(--grid-pl))] py-5 pr-5 before:absolute before:flex before:items-center before:font-semibold before:top-5 before:left-5 before:justify-center before:content-['2'] before:w-9 before:h-9 before:rounded-full before:bg-white">
+                            <p class="ml-4 text-left text-xl leading-6 font-medium">
+                                Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов
+                            </p>
+                        </div>
+                        <div class="relative bg-[url('../../assets/common/CooperUnionStampPaper_tall.png'),url('../../assets/desktop/bg_chess_player_desktop.png')] pl-[calc(var(--counter-height)+var(--grid-pl))] py-5 pr-5 grid-rows-subgrid row-span-2 before:absolute before:font-semibold before:flex before:items-center before:justify-center before:top-5 before:left-5 before:content-['3'] before:w-9 before:h-9 before:rounded-full before:bg-white">
+                            <p class="ml-4 text-left text-xl leading-6 font-medium">
+                                Поднятие сельского хозяйства в радиусе <br>на тысячу километров: производство
+                                овощей, фруктов, икры,
+                                шоколадных конфет
+                            </p>
+                        </div>
+                        <div class="relative bg-[url('../../assets/common/CooperUnionStampPaper_tall.png'),url('../../assets/desktop/bg_chess_player_desktop.png')] pl-[calc(var(--counter-height)+var(--grid-pl))] py-5 pr-5 before:absolute before:flex before:items-center before:font-semibold before:justify-center before:top-5 before:left-5 before:content-['4'] before:w-9 before:h-9 before:rounded-full before:bg-white">
+                            <p class="ml-4 text-left text-xl leading-6 font-medium">
+                                Строительство дворца для турнира
+                            </p>
+                        </div>
+                        <div class="relative bg-[url('../../assets/common/CooperUnionStampPaper_tall.png'),url('../../assets/desktop/bg_chess_player_desktop.png')] pl-[calc(var(--counter-height)+var(--grid-pl))] py-5 pr-5 before:absolute before:flex before:items-center before:font-semibold before:justify-center before:top-5 before:left-5 before:content-['5'] before:w-9 before:h-9 before:rounded-full before:bg-white">
+                            <p class="ml-4 text-left text-xl leading-6 font-medium">
+                                Размещение гаражей <br>для гостевого автотранспорта
+                            </p>
+                        </div>
+                        <div class="relative bg-[url('../../assets/common/CooperUnionStampPaper_tall.png'),url('../../assets/desktop/bg_chess_player_desktop.png')] pl-[calc(var(--counter-height)+var(--grid-pl))] py-5 pr-5 before:absolute before:flex before:items-center before:font-semibold before:justify-center before:top-5 before:left-5 before:content-['6'] before:w-9 before:h-9 before:rounded-full before:bg-white">
+                            <p class="ml-4 text-left text-xl leading-6 font-medium">
+                                Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
+                            </p>
+                        </div>
+                        <div class="relative flex bg-[url('../../assets/common/CooperUnionStampPaper_tall.png'),url('../../assets/desktop/bg_chess_player_desktop.png')] pl-[calc(var(--counter-height)+var(--grid-pl))] py-5 pr-5 grid-rows-subgrid col-span-2 before:absolute before:font-semibold before:flex before:items-center before:justify-center before:top-5 before:left-5 before:content-['7'] before:w-9 before:h-9 before:rounded-full before:bg-white">
+                            <p class="ml-4 max-w-[450px] text-left text-xl leading-6 font-medium">
+                                Создание аэропорта «Большие Васюки» <br>с регулярным отправлением почтовых самолётов
+                                и дирижаблей во все
+                                концы света, включая Лос-Анжелос и Мельбурн
+                            </p>
+                            <div class="absolute bottom-0 left-[60%] w-[376px] h-[140px]">
+                                <picture>
+                                    <source media="(max-width: 640px)"
+                                            srcset="assets/mobile/plane_mobile.png"/>
+                                    <source media="(min-width: 860px)"
+                                            srcset="assets/desktop/plane_desktop.png"/>
+                                    <img class="absolute block bottom-0 left-0 w-full h-auto -top-[60%]"
+                                         src="assets/desktop/plane_desktop.png"
+                                         alt="Самолёт в небе"/>
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:hidden" id="carousel"></div>
+            </div>
+        </section>
+        <section class="mt-[120px] mb-[100px]">
+            <div class="mx-auto w-full max-w-[1222px] px-5">
+                <div id="infiniteCarousel"></div>
+            </div>
+        </section>
+        <div class="relative group flex overflow-hidden bg-yac-red-100 font-Merriweather font-normal text-white uppercase flex-row" style="--marquee-duration: 12000ms;--bullet-w: 6px;--marquee-py: 18px">
+            <div class="flex shrink-0 justify-around animate-marquee flex-row group-hover:[animation-play-state:paused]">
+                <div class="relative w-auto cursor-pointer overflow-hidden py-[var(--marquee-py)] px-3">
+                    <p class="text-[22px] leading-[1.1]">Дело помощи утопающим&nbsp;&mdash;&nbsp;дело рук самих утопающих!</p>
+                </div>
+                <span class="inline-flex justify-center items-center w-1.5 text-white">&#9679;</span>
+                <div class="relative w-auto cursor-pointer overflow-hidden py-[var(--marquee-py)] px-3">
+                    <p class="text-[22px] leading-[1.1]">Шахматы двигают вперёд не только культуру, но и экономику!</p>
+                </div>
+                <span class="inline-flex justify-center items-center w-1.5 text-white">&#9679;</span>
+                <div class="relative w-auto cursor-pointer overflow-hidden py-[var(--marquee-py)] px-3">
+                    <p class="text-[22px] leading-[1.1]">Лёд тронулся, господа присяжные заседатели!</p>
+                </div>
+                <span class="inline-flex justify-center items-center w-1.5 text-white">&#9679;</span>
+            </div>
+            <div class="flex shrink-0 justify-around animate-marquee flex-row group-hover:[animation-play-state:paused]">
+                <div class="relative w-auto cursor-pointer overflow-hidden py-[var(--marquee-py)] px-3">
+                    <p class="text-[22px] leading-[1.1]">Дело помощи утопающим&nbsp;&mdash;&nbsp;дело рук самих утопающих!</p>
+                </div>
+                <span class="inline-flex justify-center items-center w-1.5 text-white">&#9679;</span>
+                <div class="relative w-auto cursor-pointer overflow-hidden py-[var(--marquee-py)] px-3">
+                    <p class="text-[22px] leading-[1.1]">Шахматы двигают вперёд не только культуру, но и экономику!</p>
+                </div>
+                <span class="inline-flex justify-center items-center w-1.5 text-white">&#9679;</span>
+                <div class="relative w-auto cursor-pointer overflow-hidden py-[var(--marquee-py)] px-3">
+                    <p class="text-[22px] leading-[1.1]">Лёд тронулся, господа присяжные заседатели!</p>
+                </div>
+                <span class="inline-flex justify-center items-center w-1.5 text-white">&#9679;</span>
+            </div>
+        </div>
+    </main>
+    <footer class="mt-0 bg-yac-almond-100" style="--footer-pb-lg: 72px; --footer-pb: 60px;">
+        <div class="mx-auto w-full max-w-[1222px] px-5 ">
+            <div class="relative pt-10 pb-[var(--footer-pb)] lg:pb-[var(--footer-pb-lg)]">
+                <div class="mx-auto">
+                    <p class="text-base text-yac-jet-100/60 font-Golos font-normal leading-[1.2]">
+                        Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта.
+                        С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова
+                        «Двенадцать стульев».
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script type="module">
+    import slides from './data/slides.mjs';
+    import players from './data/players.mjs';
+
+    import Carousel from './scripts/carousel.mjs';
+    import InfiniteCarousel from "./scripts/infiniteCarousel.mjs";
+
+    const carouselConfig = {
+        slides: slides,
+        autoplay: false,
+        autoplaySpeed: 0,
+    };
+    const infiniteCarouselConfig = {
+        players: players,
+        autoplay: true,
+        autoplaySpeed: 4000,
+    };
+    const carousel = new Carousel(carouselConfig);
+    const containerElement = document.body.querySelector('#carousel');
+    containerElement.append(carousel.elem);
+
+    const infiniteCarousel = new InfiniteCarousel(infiniteCarouselConfig);
+    const infContainerElement = document.body.querySelector('#infiniteCarousel');
+    infContainerElement.append(infiniteCarousel.elem);
+</script>
+</body>
+</html>
