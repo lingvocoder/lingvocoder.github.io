@@ -48,7 +48,7 @@ export default class InfiniteCarousel {
             setTimeout(() => {
                 this.moveSlide();
                 this.counter = this.visibleSlidesNum;
-            }, 1000)
+            }, 0)
         }
     }
 

@@ -42,7 +42,7 @@ export default class Carousel {
             setTimeout(() => {
                 this.moveSlide();
                 this.counter = 1;
-            }, 1000)
+            }, 0)
         }
     }
 
