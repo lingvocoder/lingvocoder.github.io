@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" style="
+--counter-height: 36px;
+--text-left-offset: 20px;
+">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
+    <link rel="stylesheet" href="../../../../dist/styles.css">
+    <title>Player Card</title>
+</head>
+<body>
+<section class="yac-card-wrapper flex m-auto items-center justify-center"></section>
+<script type="module">
+
+    const slide = {
+        id: 1,
+        texts: [
+            {
+                id: 1,
+                text: 'Строительство железнодорожной магистрали Москва-Васюки'
+            },
+            {
+                id: 2,
+                text: 'Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов'
+            }
+        ],
+        bgImages: {
+            main: 'CooperUnionStampPaper_tall.png',
+            supplement: 'bg_chess_player_desktop.png'
+        }
+    };
+    import {createElement} from "../../../../scripts/helpers/createElement.js";
+
+    class Card {
+        elem = null;
+
+        constructor({slides}) {
+            this.slides = slides;
+            this.render();
+        }
+
+        render() {
+            if (!this.elem) {
+                this.elem = createElement(this.getCard(this.slides));
+            }
+            return this.elem;
+        }
+
+        getCard = (data) => {
+            return `
+        <div class="relative flex flex-col w-[350px] h-[800px]">
+        <h2 class="font-Merriweather uppercase text-4xl font-normal leading-10 mb-3">Этапы преображения Васюков</h2>
+        <p class="text-lg leading-[22px] text-yac-blue-100 font-normal">Будущие источники обогащения васюкинцев</p>
+            <div class="relative yac-carousel mt-[148px]">
+               <div class="absolute -top-1/4 left-0 w-full h-[140px] z-10">
+                <img class="absolute block bottom-0 left-0 w-full h-auto" src="../../../../assets/desktop/plane_desktop.png">
+            </div>
+                <ul class="will-change-transform transition-transform flex flex-row flex-nowrap gap-8 list-none">
+                    ${this.getSlide(data)}
+                </ul>
+            </div>
+        </div>
+            `;
+        };
+
+        getSlide = ({id, texts, bgImages}) => {
+            return `
+           <li data-id="${id}" class="yac-carousel-slide relative pt-[48px] pr-6 pb-5 pl-5 flex flex-col basis-full flex-shrink-0 bg-[url('../../assets/common/${bgImages.main}'),url('../../assets/desktop/${bgImages.supplement}')]">
+              ${this.getSlots(texts)}
+           </li>
+        `;
+        };
+
+        getSlot = ({id, text}) => {
+            return `
+         <div class="relative pl-[calc(var(--counter-height)+var(--text-left-offset))] pt-3.5 pb-3.5 before:absolute before:flex before:items-center before:top-4 before:left-0 before:justify-center before:content-['${id}'] before:font-semibold before:text-lg before:leading-[1.2] before:w-9 before:h-9 before:rounded-full before:bg-white">
+              <p class="text-left text-lg leading-[1.2] font-medium">${text}</p>
+            </div>
+          `;
+        };
+
+        getSlots = (data) => data.map(item => this.getSlot(item)).join('');
+
+
+    }
+
+    let cardConfig = {
+        slides: slide,
+    }
+    let card = new Card(cardConfig);
+    let containerElement = document.body.querySelector('.yac-card-wrapper');
+    containerElement.append(card.elem);
+</script>
+</body>
+</html>

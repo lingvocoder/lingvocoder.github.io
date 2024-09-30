@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        -webkit-font-variant-ligatures: none;
+        text-rendering: optimizeLegibility;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-variant-ligatures: none;
+        text-shadow: 0 0 1px hsla(200, 52%, 6%, 0.02);
+    }
+}
+
+.yac-select-btn_active {
+    background-color: #313131;
+}
+
+@font-face {
+    font-family: "Golos Text";
+    src: url("../fonts/Golos_Text/GolosText-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Merriweather";
+    src: url("../fonts/Merriweather/Merriweather-Regular.ttf") format("truetype");
+    font-weight: 400;
+}

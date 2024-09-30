@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" style="
+--controls-mt: 40px;
+--header-bg: #E9DED4;
+--header-height-lg: 700px;
+--header-height-sm: 812px;
+--cta-left-bg: #1F1F1F;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../dist/styles.css">
+    <title>Hero</title>
+</head>
+<body>
+<header class="relative overflow-hidden lg:min-h-[var(--header-height-lg)] min-h-[var(--header-height-sm)] bg-[var(--header-bg)]">
+    <div class="absolute w-full h-full mix-blend-color-burn overflow-hidden z-40">
+        <picture>
+            <source media="(max-width: 640px)"
+                    srcset="../../../assets/mobile/mask_overlay_mobile.png"/>
+            <source media="(min-width: 860px)"
+                    srcset="../../../assets/desktop/mask_overlay_desktop.png"/>
+            <img class="object-cover w-full h-full"
+                 src="../../../assets/desktop/mask_overlay_desktop.png" alt="Текстурный фон напоминающий мрамор"/>
+        </picture>
+    </div>
+    <div class="mx-auto max-w-[1222px] h-full px-5 pt-[18px]">
+        <div class="relative lg:h-9">
+            <a href="#" target="_blank" class="mt-0">
+                <picture>
+                    <source media="(max-width: 640px)"
+                            srcset="../../../assets/mobile/logo_mobile.png"/>
+                    <source media="(min-width: 860px)"
+                            srcset="../../../assets/desktop/logo_desktop.png"/>
+                    <img class="object-cover w-auto h-full"
+                         src="../../../assets/desktop/logo_desktop.png" alt="Логотип шахматного клуба"/>
+                </picture>
+            </a>
+        </div>
+        <div class="relative flex flex-col lg:flex-row lg:flex-nowrap">
+            <div class="relative max-w-[542px] z-50">
+                <h2 class="font-Merriweather uppercase lg:text-6xl lg:leading-[1.1] text-4xl font-normal leading-[1.1] mt-10">
+                    <span class="inline-block whitespace-pre-line">Превратите уездный город</span>
+                    <span class="inline-block lg:ml-[91px] ml-[63px]">в столицу</span>
+                    <span class="inline-block whitespace-pre lg:ml-[38px] ml-6">земного шара</span>
+                </h2>
+                <p class="text-lg leading-[1.3] font-Golos font-normal text-center text-yac-jet-100 mt-6">Оплатите
+                    взнос на телеграммы для организации Международного васюкинского турнира по шахматам</p>
+                <div class="flex flex-row lg:flex-nowrap flex-wrap lg:gap-4 gap-3.5 lg:mt-10 mt-8">
+                    <a href="#"
+                       class=" w-full lg:whitespace-pre-line lg:px-[49px] lg:py-[20px] text-center rounded-full bg-[var(--cta-left-bg)] px-[43px] py-[13px]
+                          text-base leading-[1.3] font-medium text-white hover:bg-yac-sunglow-100 hover:text-[var(--cta-left-bg)] transition ease-in-out duration-200">Поддержать
+                        шахматную мысль</a>
+                    <a href="#"
+                       class="w-full lg:whitespace-pre-line lg:px-[49px] lg:py-[20px] text-center rounded-full lg:bg-transparent px-[13px] py-[13px]
+                          text-base leading-[1.3] lg:border-2 lg:border-[var(--cta-left-bg)] font-medium hover:bg-[var(--cta-left-bg)]
+                          hover:text-white transition ease-in-out duration-200 bg-white/90 text-[var(--cta-left-bg)]">Подробнее
+                        о турнире</a>
+                </div>
+            </div>
+            <div class="relative lg:-top-[44px] -mt-20 lg:left-[59px]">
+                <div class="relative h-full w-full">
+                    <picture>
+                        <source media="(max-width: 640px)"
+                                srcset="../../../assets/mobile/ellipse_mobile.png"/>
+                        <source media="(min-width: 860px)"
+                                srcset="../../../assets/desktop/ellipse_desktop.png"/>
+                        <img class="lg:scale-[1.0328125] w-full h-auto"
+                             src="../../../assets/desktop/ellipse_desktop.png" alt="Круг желтого цвета"/>
+                    </picture>
+                </div>
+                <div class="absolute left-0 top-0 h-auto w-full animate-rotate mix-blend-overlay z-20"
+                     style="--rotation-duration: 30000ms;">
+                    <picture>
+                        <source media="(max-width: 640px)"
+                                srcset="../../../assets/mobile/circle-text_mobile.png"/>
+                        <source media="(min-width: 860px)"
+                                srcset="../../../assets/desktop/circle-text_desktop.png"/>
+                        <img class="scale-[1.18] lg:transform-none w-full h-auto"
+                             src="../../../assets/desktop/circle-text_desktop.png" alt="Текст по кругу"/>
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="absolute w-full h-full top-0 z-30">
+        <picture>
+            <source media="(max-width: 640px)"
+                    srcset="../../../assets/mobile/city_mobile.png"/>
+            <source media="(min-width: 860px)"
+                    srcset="../../../assets/desktop/city_desktop.png"/>
+            <source media="(min-width: 1440px)"
+                    srcset="../../../assets/desktop/city_desktop_xl.png"/>
+            <img class="absolute bottom-0 object-cover w-full  h-auto"
+                 src="../../../assets/desktop/city_desktop.png" alt="Город"/>
+        </picture>
+    </div>
+    <div class="absolute w-auto h-auto -bottom-[2%] left-1/2 -translate-x-1/2 lg:left-[68%] lg:bottom-[1%] scale-[1.1] z-40">
+        <picture>
+            <source media="(max-width: 640px)"
+                    srcset="../../../assets/mobile/kon-white_mobile.png"/>
+            <source media="(min-width: 860px)"
+                    srcset="../../../assets/desktop/kon-white_desktop.png"/>
+            <img class="object-cover w-full h-auto"
+                 src="../../../assets/desktop/kon-white_desktop.png" alt="Шахматная фигура"/>
+        </picture>
+    </div>
+    <div class="absolute w-auto h-auto bottom-[14%] left-[15%] lg:left-[54%] lg:bottom-[27%] z-20">
+        <picture>
+            <source media="(max-width: 640px)"
+                    srcset="../../../assets/mobile/ferz-l_mobile.png"/>
+            <source media="(min-width: 860px)"
+                    srcset="../../../assets/desktop/ferz-l_desktop.png"/>
+            <img class="object-cover w-full h-auto"
+                 src="../../../assets/desktop/ferz-l_desktop.png" alt="Шахматная фигура"/>
+        </picture>
+    </div>
+    <div class="absolute w-auto h-auto bottom-[21%] left-[59%] lg:left-[78%] lg:bottom-[43%] z-20">
+        <picture>
+            <source media="(max-width: 640px)"
+                    srcset="../../../assets/mobile/ferz-r_mobile.png"/>
+            <source media="(min-width: 860px)"
+                    srcset="../../../assets/desktop/ferz-r_desktop.png"/>
+            <img class="object-cover w-full h-auto"
+                 src="../../../assets/desktop/ferz-r_desktop.png" alt="Шахматная фигура"/>
+        </picture>
+    </div>
+    <div class="absolute hidden lg:block w-auto h-auto bottom-[21%] left-[59%] lg:left-[91%] lg:bottom-[3%]  z-40">
+        <img class="object-cover w-full h-auto" src="../../../assets/desktop/peshka_desktop.png" alt="Шахматная фигура"/>
+    </div>
+</header>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build": "postcss css/styles.css -o dist/styles.css",
+    "watch": "postcss css/styles.css -o dist/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  },
+  "dependencies": {
+    "postcss-cli": "^11.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.45"
+  }
+}

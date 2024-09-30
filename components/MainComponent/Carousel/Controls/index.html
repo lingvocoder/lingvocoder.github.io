@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
+    <link rel="stylesheet" href="../../../../dist/styles.css">
+    <title>Carousel controls with selectBox</title>
+</head>
+<body>
+<section class="yac-selectBox-wrapper flex m-auto items-center justify-center h-28"></section>
+<script type="module">
+    import slides from '../../../../data/slides.mjs';
+    import {createElement} from "../../../../scripts/helpers/createElement.js";
+
+    class SelectBox {
+        elem = null;
+
+        constructor({slides = []}) {
+            this.slides = slides;
+            this.render();
+        }
+
+        render() {
+            if (!this.elem) {
+                this.elem = createElement(this.getSelectBox(this.slides));
+            }
+            return this.elem;
+        }
+
+        getSelectBox = (data) => {
+            return `
+
+            <div class="flex justify-center">
+                <div class="flex justify-center items-center gap-4">
+                    <button data-dir="1" type="button" disabled
+                        class="carousel-btn-prev disabled:bg-[#d9d9d9] flex w-9 h-9 lg:w-11 lg:h-11 items-center justify-center rounded-full bg-yac-jet-100 transition-colors hover:bg-yac-sunglow-100">
+                        <svg class="leading-none w-[7px] h-[14px] lg:w-[8.5px] lg:h-[17px]" viewBox="0 0 10 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.07664 15.923L1.15357 8.9999L8.07664 2.07682" stroke="white" stroke-width="1.63636" stroke-linecap="square"/>
+                        </svg>
+                    </button>
+                    <div class="yac-carousel__select-box flex flex-row flex-nowrap gap-1.5">
+                        ${this.getDots(data)}
+                    </div>
+                    <button data-dir="-1" type="button"
+                        class="carousel-btn-next flex w-9 h-9 lg:w-11 lg:h-11 items-center justify-center rounded-full bg-yac-jet-100 transition-colors hover:bg-yac-sunglow-100">
+                        <svg class="leading-none w-[7px] h-[14px] lg:w-[8.5px] lg:h-[17px]" viewBox="0 0 10 18" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.92336 2.0769L8.84644 8.99998L1.92336 15.9231" stroke="white" stroke-width="1.63636" stroke-linecap="square"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            `;
+        };
+
+        getDot = ({id}) => {
+            return `
+            <button type="button" data-id="${id}" class="block active:bg-[#313131] focus:bg-[#313131] rounded-full w-[10px] h-[10px] bg-[#d9d9d9]"></button>
+    `;
+        }
+
+        getDots = (data) => data.map(item => this.getDot(item)).join('');
+
+    }
+
+    let selectBoxConfig = {
+        slides: slides,
+    }
+    let selectBox = new SelectBox(selectBoxConfig);
+    let containerElement = document.body.querySelector('.yac-selectBox-wrapper');
+    containerElement.append(selectBox.elem);
+
+</script>
+</body>
+</html>
