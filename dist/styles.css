@@ -527,6 +527,9 @@ video {
 .relative {
   position: relative;
 }
+.-bottom-\[2\%\] {
+  bottom: -2%;
+}
 .-top-1\/2 {
   top: -50%;
 }
@@ -565,12 +568,6 @@ video {
 }
 .top-0 {
   top: 0px;
-}
-.top-\[2\%\] {
-  top: 2%;
-}
-.-bottom-\[2\%\] {
-  bottom: -2%;
 }
 .z-10 {
   z-index: 10;
@@ -941,41 +938,14 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(245 73 50 / var(--tw-bg-opacity));
 }
-.bg-\[url\(\'\$\{bgImages\.main\}\'\)\2c url\(\'\$\{bgImages\.supplement\}\'\)\] {
-  background-image: url('${bgImages.main}'),url('${bgImages.supplement}');
-}
-.bg-\[url\(\'\.\.\/\.\.\/assets\/\$\{bgImages\.main\}\'\)\2c url\(\'\.\.\/\.\.\/assets\/\$\{bgImages\.supplement\}\'\)\] {
-  background-image: url('../../assets/${bgImages.main}'),url('../../assets/${bgImages.supplement}');
-}
-.bg-\[url\(\'\.\.\/\.\.\/assets\/CooperUnionStampPaper\.png\'\)\2c url\(\'\.\.\/\.\.\/assets\/bg\.png\'\)\] {
-  background-image: url('../../assets/CooperUnionStampPaper.png'),url('../../assets/bg.png');
-}
-.bg-\[url\(\'\.\.\/\.\.\/assets\/common\/\$\{bgImages\.main\}\'\)\2c url\(\'\.\.\/\.\.\/assets\/common\/\$\{bgImages\.supplement\}\'\)\] {
-  background-image: url('../../assets/common/${bgImages.main}'),url('../../assets/common/${bgImages.supplement}');
-}
-.bg-\[url\(\'\.\.\/assets\/common\/\$\{bgImages\.main\}\'\)\2c url\(\'\.\.\/assets\/common\/\$\{bgImages\.supplement\}\'\)\] {
-  background-image: url('../assets/common/${bgImages.main}'),url('../assets/common/${bgImages.supplement}');
-}
-.bg-\[url\(\'\.\.\/\.\.\/\.\.\/assets\/common\/\$\{bgImages\.main\}\'\)\2c url\(\'\.\.\/\.\.\/\.\.\/assets\/common\/\$\{bgImages\.supplement\}\'\)\] {
-  background-image: url('../../../assets/common/${bgImages.main}'),url('../../../assets/common/${bgImages.supplement}');
-}
-.bg-\[url\(\'\.\.\/\.\.\/assets\/desktop\/\$\{bgImages\.main\}\'\)\2c url\(\'\.\.\/\.\.\/assets\/desktop\/\$\{bgImages\.supplement\}\'\)\] {
-  background-image: url('../../assets/desktop/${bgImages.main}'),url('../../assets/desktop/${bgImages.supplement}');
-}
-.bg-\[url\(\'\.\.\/\.\.\/assets\/desktop\/Cooper_Union_Stamp_Paper_desktop\.png\'\)\2c url\(\'\.\.\/\.\.\/assets\/desktop\/bg_chess_player_desktop\.png\'\)\] {
-  background-image: url('../../assets/desktop/Cooper_Union_Stamp_Paper_desktop.png'),url('../../assets/desktop/bg_chess_player_desktop.png');
-}
-.bg-\[url\(\'\.\.\/\.\.\/assets\/common\/CooperUnionStampPaper\.png\'\)\2c url\(\'\.\.\/\.\.\/assets\/desktop\/bg_chess_player_desktop\.png\'\)\] {
-  background-image: url('../../assets/common/CooperUnionStampPaper.png'),url('../../assets/desktop/bg_chess_player_desktop.png');
-}
-.bg-\[url\(\'\.\.\/\.\.\/assets\/common\/CooperUnionStampPaper_tall\.png\'\)\2c url\(\'\.\.\/\.\.\/assets\/desktop\/bg_chess_player_desktop\.png\'\)\] {
-  background-image: url('../../assets/common/CooperUnionStampPaper_tall.png'),url('../../assets/desktop/bg_chess_player_desktop.png');
-}
 .bg-\[url\(\'\.\.\/\.\.\/assets\/common\/\$\{bgImages\.main\}\'\)\2c url\(\'\.\.\/\.\.\/assets\/desktop\/\$\{bgImages\.supplement\}\'\)\] {
   background-image: url('../../assets/common/${bgImages.main}'),url('../../assets/desktop/${bgImages.supplement}');
 }
 .bg-\[url\(\'\.\.\/\.\.\/assets\/common\/CooperUnionStampPaper\.png\'\)\2c url\(\'\.\.\/\.\.\/assets\/common\/bg\.png\'\)\] {
   background-image: url('../../assets/common/CooperUnionStampPaper.png'),url('../../assets/common/bg.png');
+}
+.bg-\[url\(\'\.\.\/\.\.\/assets\/common\/CooperUnionStampPaper_tall\.png\'\)\2c url\(\'\.\.\/\.\.\/assets\/desktop\/bg_chess_player_desktop\.png\'\)\] {
+  background-image: url('../../assets/common/CooperUnionStampPaper_tall.png'),url('../../assets/desktop/bg_chess_player_desktop.png');
 }
 .object-cover {
   -o-object-fit: cover;
@@ -1015,6 +985,10 @@ video {
 .py-\[var\(--marquee-py\)\] {
   padding-top: var(--marquee-py);
   padding-bottom: var(--marquee-py);
+}
+.py-\[var\(--marquee-py-sm\)\] {
+  padding-top: var(--marquee-py-sm);
+  padding-bottom: var(--marquee-py-sm);
 }
 .pb-3\.5 {
   padding-bottom: 0.875rem;
@@ -1147,9 +1121,6 @@ video {
 .leading-\[22px\] {
   line-height: 22px;
 }
-.leading-\[28\.8px\] {
-  line-height: 28.8px;
-}
 .leading-\[29px\] {
   line-height: 29px;
 }
@@ -1264,10 +1235,6 @@ video {
 .before\:left-5::before {
   content: var(--tw-content);
   left: 1.25rem;
-}
-.before\:top-3\.5::before {
-  content: var(--tw-content);
-  top: 0.875rem;
 }
 .before\:top-4::before {
   content: var(--tw-content);
@@ -1473,12 +1440,6 @@ video {
     line-height: 56px;
   }
 }
-@media (min-width: 768px) {
-
-  .md\:justify-center {
-    justify-content: center;
-  }
-}
 @media (min-width: 1024px) {
 
   .lg\:absolute {
@@ -1489,16 +1450,16 @@ video {
     top: -44px;
   }
 
+  .lg\:bottom-\[1\%\] {
+    bottom: 1%;
+  }
+
   .lg\:bottom-\[27\%\] {
     bottom: 27%;
   }
 
   .lg\:bottom-\[3\%\] {
     bottom: 3%;
-  }
-
-  .lg\:bottom-\[4\%\] {
-    bottom: 4%;
   }
 
   .lg\:bottom-\[43\%\] {
@@ -1533,18 +1494,6 @@ video {
     top: 0px;
   }
 
-  .lg\:bottom-\[1\%\] {
-    bottom: 1%;
-  }
-
-  .lg\:left-\[61\%\] {
-    left: 61%;
-  }
-
-  .lg\:left-\[65\%\] {
-    left: 65%;
-  }
-
   .lg\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -1575,11 +1524,6 @@ video {
 
   .lg\:m-0 {
     margin: 0px;
-  }
-
-  .lg\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .lg\:mb-0 {
@@ -1670,10 +1614,6 @@ video {
     min-width: 474px;
   }
 
-  .lg\:max-w-\[1222px\] {
-    max-width: 1222px;
-  }
-
   .lg\:basis-\[calc\(theme\(flexBasis\.1\/3\)\)\] {
     flex-basis: calc(33.333333%);
   }
@@ -1682,20 +1622,9 @@ video {
     flex-basis: calc(33.333333% - 13px);
   }
 
-  .lg\:-rotate-\[10deg\] {
-    --tw-rotate: -10deg;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
   .lg\:scale-\[1\.0328125\] {
     --tw-scale-x: 1.0328125;
     --tw-scale-y: 1.0328125;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .lg\:scale-\[1\.1\] {
-    --tw-scale-x: 1.1;
-    --tw-scale-y: 1.1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -1725,10 +1654,6 @@ video {
 
   .lg\:gap-4 {
     gap: 1rem;
-  }
-
-  .lg\:gap-5 {
-    gap: 1.25rem;
   }
 
   .lg\:whitespace-pre-line {
@@ -1762,6 +1687,11 @@ video {
     padding-bottom: 20px;
   }
 
+  .lg\:py-\[var\(--marquee-py\)\] {
+    padding-top: var(--marquee-py);
+    padding-bottom: var(--marquee-py);
+  }
+
   .lg\:pb-\[var\(--footer-pb-lg\)\] {
     padding-bottom: var(--footer-pb-lg);
   }
@@ -1773,6 +1703,10 @@ video {
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .lg\:text-\[22px\] {
+    font-size: 22px;
   }
 
   .lg\:text-\[36px\] {
@@ -1789,17 +1723,5 @@ video {
 
   .lg\:leading-\[1\.2\] {
     line-height: 1.2;
-  }
-
-  .min-\[1024px\]\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-@media (min-width: 1280px) {
-
-  .xl\:px-9 {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
   }
 }
