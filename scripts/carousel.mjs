@@ -2,16 +2,13 @@ import {createElement} from "./helpers/createElement.js";
 
 export default class Carousel {
     elem = null;
-    cancelFn = null;
     selectedButton;
 
 
-    constructor({slides = [], autoplay, autoplaySpeed}) {
+    constructor({slides = []}) {
         this.counter = 1;
         this.slidesTotal = 0;
         this.slides = slides;
-        this.autoPlay = autoplay;
-        this.autoPlayInterval = autoplaySpeed;
         this.render();
         this.addEventListeners();
         this.initCarousel();
@@ -26,7 +23,6 @@ export default class Carousel {
 
     initCarousel() {
         this.slidesTotal = this.elem.querySelectorAll('.yac-carousel-slide').length;
-        this.cancelFn = this.initAutoPlay(this.autoPlayInterval);
         this.checkEdgeSlides();
     }
 
@@ -37,13 +33,6 @@ export default class Carousel {
         btnPrev.disabled = this.counter === 1;
         btnNext.disabled = this.counter === this.slidesTotal;
 
-        if (this.autoPlay && btnNext.disabled && this.counter === this.slidesTotal) {
-
-            setTimeout(() => {
-                this.moveSlide();
-                this.counter = 1;
-            }, 0)
-        }
     }
 
     updateSelectBox = () => {
@@ -108,7 +97,6 @@ export default class Carousel {
     }
 
     getSlide = ({id, texts, bgImages}) => {
-        console.log(`../../assets/desktop/${bgImages.main}`)
         return `
            <li data-id="${id}" class="yac-carousel-slide relative pt-[48px] pr-6 pb-5 pl-5 flex flex-col basis-full flex-shrink-0 bg-[url('../../assets/common/${bgImages.main}'),url('../../assets/desktop/${bgImages.supplement}')]">
               ${this.getSlots(texts)}
@@ -143,23 +131,6 @@ export default class Carousel {
         this.checkEdgeSlides();
     }
 
-    stopAutoPlay(fn, t) {
-        this.autoPlay = false;
-        setTimeout(fn, t);
-    }
-
-    initAutoPlay(t) {
-        if (this.autoPlay) {
-            let inner = setInterval(() => {
-                this.next();
-            }, t)
-            return function cancelInner() {
-                clearInterval(inner)
-            }
-        } else {
-            return false
-        }
-    }
 
     prev() {
         this.counter--;
@@ -194,7 +165,6 @@ export default class Carousel {
 
             this.onSelectBtnClick(target);
             this.updateSelectBox();
-            this.stopAutoPlay(this.cancelFn, 0);
 
             if (selectBtn) {
                 this.moveSlide();

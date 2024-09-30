@@ -44,8 +44,16 @@ export default class InfiniteCarousel {
         btnNext.disabled = Math.abs(this.counter) === this.slidesTotal;
 
         if (this.autoPlay && btnNext.disabled) {
-            this.moveSlide();
-            this.counter = -this.counter;
+            this.counter -= this.counter;
+            this.autoPlay = false;
+            this.stopAutoPlay(this.cancelFn, 0);
+            this.counter = this.visibleSlidesNum;
+
+            setTimeout(() => {
+                this.autoPlay = true;
+                this.moveSlide();
+                this.cancelFn = this.initAutoPlay(this.autoPlayInterval);
+            }, 2000)
         }
     }
 
