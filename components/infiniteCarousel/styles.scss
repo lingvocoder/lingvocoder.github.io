@@ -1,0 +1,84 @@
+@import "../../abstracts/variables";
+@import "../../abstracts/mixins";
+@import "../../abstracts/functions";
+
+$carousel-btn-bg-idle: #d9d9d9;
+$carousel-btn-bg-active: #313131;
+$carousel-btn-height-lg: 2.75rem;
+$carousel-btn-height-sm: 2.25rem;
+$carousel-btn-width-lg: 2.75rem;
+$carousel-btn-width-sm: 2.25rem;
+$carousel-heading-mb: 2.5rem;
+$carousel-container-gap: 1.25rem;
+$transition-duration: 450ms;
+
+.inf-carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 1px;
+    order: 1;
+  }
+
+  &__heading {
+    margin-bottom: $carousel-heading-mb;
+    font: {
+      size: setFontSizeRem($rf-size, 54);
+      family: $heading-font;
+      weight: 400;
+    };
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  &__container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.25rem;
+    list-style: none;
+    transition: transform $transition-duration cubic-bezier(0.4, 0, 1, 1) 0s;
+    will-change: transform;
+  }
+
+  &__text {
+    font: {
+      family: $main-font;
+      weight: 500;
+      size: setFontSizeRem($rf-size, 18);
+    };
+    text-align: left;
+    line-height: 1.2;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  .inf-carousel {
+
+    &__container {
+      gap: 0;
+    }
+
+    &__heading {
+      font: {
+        size: setFontSizeRem($rf-size, 36);
+      };
+      line-height: 1.1;
+    }
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .inf-carousel {
+
+    &__heading {
+      text-align: center;
+    }
+  }
+}

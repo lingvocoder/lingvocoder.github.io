@@ -1,0 +1,142 @@
+@import "../../abstracts/functions";
+@import "../../abstracts/variables";
+@import "../../abstracts/mixins";
+
+$carousel-max-w-sm: 20.9375rem;
+$carousel-max-w-md: 26.25rem;
+$carousel-btn-bg-idle: #d9d9d9;
+$carousel-btn-bg-active: #313131;
+$counter-height: 2.25rem;
+$carousel-wrapper-mt: 148px;
+$text-left-offset: 1rem;
+$transition-duration: 450ms;
+
+.carousel {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: $carousel-max-w-sm;
+
+  &__wrapper {
+    position: relative;
+    margin-top: $carousel-wrapper-mt;
+  }
+
+  &__heading {
+    font: {
+      size: setFontSizeRem($rf-size, 36);
+      family: $heading-font;
+      weight: 400;
+    };
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    text-align: left;
+  }
+
+  &__subheading {
+    font: {
+      family: $main-font;
+      size: setFontSizeRem($rf-size, 18);
+      weight: 400;
+    };
+    line-height: 1.2;
+    color: $btn-text-color;
+    text-align: left;
+  }
+
+  &__container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.5rem;
+    list-style: none;
+    transition: transform $transition-duration cubic-bezier(0.4, 0, 1, 1) 0s;
+    will-change: transform;
+  }
+
+  &__slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    padding: 3rem 1.5rem 1.25rem 1.25rem;
+    background-image: url("../../assets/common/CooperUnionStampPaper_tall.png"), url("../../assets/desktop/bg_chess_player_desktop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__slot {
+    position: relative;
+    padding-left: calc($counter-height + $text-left-offset);
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+
+    &:before {
+      position: absolute;
+      width: 2.25rem;
+      height: 2.25rem;
+      top: 0.875rem;
+      left: 0;
+      content: attr(data-slot-id);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font: {
+        family: $main-font;
+        weight: 600;
+        size: setFontSizeRem($rf-size, 20);
+      };
+      line-height: 1.2;
+      border-radius: 9999px;
+      background-color: #ffffff;
+    }
+  }
+
+  &__text {
+    font: {
+      family: $main-font;
+      weight: 500;
+      size: setFontSizeRem($rf-size, 18);
+    };
+    text-align: left;
+    line-height: 1.2;
+  }
+
+  &__banner {
+    position: absolute;
+    top: -60%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/mobile/plane_mobile.png");
+    background-position: top 40px left 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 10;
+  }
+}
+
+
+
+@media screen and (max-width: 640px) {
+  .carousel {
+    display: flex;
+    max-width: $carousel-max-w-sm;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .carousel {
+    display: flex;
+    max-width: $carousel-max-w-md;
+
+    &__banner {
+      top: -70%;
+      background-position: top 10px left 10px;
+    }
+  }
+}

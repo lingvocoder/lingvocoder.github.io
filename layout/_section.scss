@@ -1,0 +1,56 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+$section-a-mt-lg: 5rem;
+$section-b-mt-lg: 4rem;
+$section-c-mt-lg: 12.5rem;
+$section-d-mt-lg: 12.5rem;
+$section-d-mb-lg: 8.75rem;
+
+$section-a-mt-sm: 3rem;
+$section-b-mt-sm: 1.3125rem;
+$section-c-mt-sm: 7.5rem;
+$section-d-mt-sm: 7.5rem;
+$section-d-mb-sm: 6.25rem;
+
+.section {
+
+  &_a {
+    margin-top: $section-a-mt-lg;
+  }
+
+  &_b {
+    margin-top: $section-b-mt-lg;
+  }
+
+  &_c {
+    margin-top: $section-c-mt-lg;
+  }
+
+  &_d {
+    margin-top: $section-d-mt-lg;
+    margin-bottom: $section-d-mb-lg;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .section {
+
+    &_a {
+      margin-top: $section-a-mt-sm;
+    }
+
+    &_b {
+      margin-top: $section-b-mt-sm;
+    }
+
+    &_c {
+      margin-top: $section-c-mt-sm;
+    }
+
+    &_d {
+      margin-top: $section-d-mt-sm;
+      margin-bottom: $section-d-mb-sm;
+    }
+  }
+}

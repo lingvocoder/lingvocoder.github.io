@@ -1,0 +1,52 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+/// Основной текст
+$main-font: 'GolosText', sans-serif !default;
+
+/// Заголовки
+$heading-font: 'Merriweather' !default;
+
+///Размер шрифта
+$rf-size: 16px;
+
+///Цвет шрифта
+$main-text-color: #313131;
+$btn-text-color: #3057A2;
+$controls-counter-color: #838383;
+$event-info-color: #D0D0D0;
+$event-border-color: #e5e7eb;
+
+///Анимации
+$animation-timing: 0.45, 0, 0.55, 1;
+$animation-duration: 200ms;
+
+/// Фоны
+$header-bg: #E9DED4;
+$footer-bg: #E9DED4;
+$marquee-bg: #F54932;
+$controls-btn-bg: #313131;
+$controls-btn-bg-hvr: #FBCE51;
+$controls-btn-bg-idle: #d9d9d9;
+
+/// Максимальная ширина центрального контейнера
+$max-width: 1366px !default;
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+        'small': 375px,
+        'medium': 768px,
+        'large': 1024px,
+) !default;
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'https://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

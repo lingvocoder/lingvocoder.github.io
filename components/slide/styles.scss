@@ -1,0 +1,95 @@
+@import "../../abstracts/variables";
+@import "../../abstracts/mixins";
+
+$carousel-container-gap: 1.25rem;
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: calc((100% - ($carousel-container-gap * var(--carousel-visible-slides))) / var(--carousel-visible-slides));
+  flex-shrink: 0;
+
+  &__img {
+    width: 320px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__name {
+    margin-top: 1.75rem;
+    font: {
+      family: $main-font;
+      size: setFontSizeRem($rf-size, 24);
+      weight: 600;
+    };
+    color: $main-text-color;
+    line-height: 1.2;
+  }
+
+  &__title {
+    margin-top: 0.375rem;
+    margin-bottom: 1.25rem;
+    font: {
+      family: $main-font;
+      size: setFontSizeRem($rf-size, 20);
+      weight: 400;
+    }
+    line-height: 1.2;
+    color: $controls-counter-color;
+  }
+
+  &__btn {
+    display: inline-block;
+    width: auto;
+    height: 2.1875rem;
+    padding: 0 0.75rem;
+    border-radius: 9999px;
+    align-content: center;
+    font: {
+      family: $main-font;
+      size: setFontSizeRem($rf-size, 16);
+      weight: 500;
+    };
+    line-height: 1.2;
+    text-decoration: none;
+    background: transparent;
+    color: $btn-text-color;
+    border: 1px solid $btn-text-color;
+    transition: background-color, color $animation-duration cubic-bezier($animation-timing) 0s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $btn-text-color;
+      color: #ffffff;
+    }
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+  .slide {
+    flex-basis: 100%;
+
+    &__img {
+      width: 244px;
+    }
+
+    &__title {
+      margin-top: 0.5rem;
+
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .slide {
+
+    &__img {
+      width: 264px;
+    }
+
+  }
+}

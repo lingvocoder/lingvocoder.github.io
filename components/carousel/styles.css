@@ -1,0 +1,110 @@
+.carousel {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 20.9375rem;
+}
+.carousel__wrapper {
+  position: relative;
+  margin-top: 148px;
+}
+.carousel__heading {
+  font-size: 2.25rem;
+  font-family: "Merriweather";
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+.carousel__subheading {
+  font-family: "GolosText", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #3057A2;
+  text-align: left;
+}
+.carousel__container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+  list-style: none;
+  transition: transform 450ms cubic-bezier(0.4, 0, 1, 1) 0s;
+  will-change: transform;
+}
+.carousel__slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  padding: 3rem 1.5rem 1.25rem 1.25rem;
+  background-image: url("../../assets/common/CooperUnionStampPaper_tall.png"), url("../../assets/desktop/bg_chess_player_desktop.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel__slot {
+  position: relative;
+  padding-left: 3.25rem;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+.carousel__slot:before {
+  position: absolute;
+  width: 2.25rem;
+  height: 2.25rem;
+  top: 0.875rem;
+  left: 0;
+  content: attr(data-slot-id);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "GolosText", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  border-radius: 9999px;
+  background-color: #ffffff;
+}
+.carousel__text {
+  font-family: "GolosText", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-align: left;
+  line-height: 1.2;
+}
+.carousel__banner {
+  position: absolute;
+  top: -60%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/mobile/plane_mobile.png");
+  background-position: top 40px left 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+}
+
+@media screen and (max-width: 640px) {
+  .carousel {
+    display: flex;
+    max-width: 20.9375rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .carousel {
+    display: flex;
+    max-width: 26.25rem;
+  }
+  .carousel__banner {
+    top: -70%;
+    background-position: top 10px left 10px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

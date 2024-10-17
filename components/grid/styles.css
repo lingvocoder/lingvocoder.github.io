@@ -1,0 +1,103 @@
+@charset "UTF-8";
+.grid__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.grid__inner {
+  display: grid;
+  grid-template-rows: 112px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.grid__heading {
+  max-width: calc((100% - 1.25rem) / 3 * 2);
+  margin-bottom: 3.375rem;
+  width: auto;
+  font-family: "Merriweather";
+  font-size: 3.375rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: left;
+  text-transform: uppercase;
+}
+.grid__heading:after {
+  position: relative;
+  content: "Будущие источники обогащения васюкинцев";
+  display: inline-block;
+  max-width: 280px;
+  word-break: break-word;
+  margin-left: 1rem;
+  text-transform: none;
+  font-family: "GolosText", sans-serif;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #3057A2;
+}
+.grid__text {
+  margin-left: 1rem;
+  font-family: "GolosText", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.2;
+}
+.grid__item {
+  position: relative;
+  background-image: url("../../assets/common/CooperUnionStampPaper.png"), url("../../assets/common/bg.png");
+  padding: 1.25rem 1.25rem 1.25rem 3.5rem;
+}
+.grid__item[data-id="3"] {
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+}
+.grid__item[data-id="7"] {
+  display: flex;
+  grid-template-columns: subgrid;
+  grid-column: span 2/span 4;
+}
+.grid__item[data-id="7"] .grid__text {
+  max-width: 446px;
+}
+.grid__item:before {
+  position: absolute;
+  left: 1.25rem;
+  top: 1.25rem;
+  content: attr(data-id);
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  font-size: 1.25rem;
+  font-family: "GolosText", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.grid__illustration {
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+  width: 376px;
+  height: 140px;
+}
+.grid__image {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  top: -60%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .grid__wrapper {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

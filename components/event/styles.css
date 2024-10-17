@@ -1,0 +1,181 @@
+.event__heading {
+  max-width: 42rem;
+  margin-bottom: 3.75rem;
+  font-family: "Merriweather";
+  font-size: 2.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.35;
+  text-align: left;
+}
+.event__subheading {
+  font-family: "Merriweather";
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: inherit;
+  text-transform: uppercase;
+  color: #F54932;
+}
+.event__wrapper {
+  display: flex;
+  margin-top: 1.75rem;
+}
+.event__table {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  flex-basis: 44rem;
+}
+.event__list {
+  border-color: #e5e7eb;
+  font-family: "GolosText", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+.event__item {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 1rem;
+  text-align: left;
+}
+.event__item_top {
+  border-top: 2px solid #e5e7eb;
+}
+.event__item:last-child > .event__info {
+  padding-bottom: 0;
+}
+.event__item:last-child > .event__name {
+  padding-bottom: 0;
+}
+.event__item:first-child > .event__info {
+  padding-top: 0;
+}
+.event__item:first-child > .event__name {
+  padding-top: 0;
+}
+.event__name {
+  padding: 1rem 0 1rem 0;
+  font-weight: 400;
+  color: rgba(49, 49, 49, 0.7);
+}
+.event__info {
+  padding: 1rem 0 1rem 1rem;
+  font-weight: 600;
+  color: #313131;
+  border-left: 2px solid #e5e7eb;
+  grid-column: 2/2;
+}
+.event__info_extra {
+  text-decoration: line-through;
+  text-decoration-color: #F54932;
+}
+.event__img-wrapper {
+  display: flex;
+  position: relative;
+  flex-basis: 474px;
+  height: 527px;
+  margin-right: 2.75rem;
+}
+.event__bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/desktop/chess-player.png");
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  background-color: #ffffff;
+  resize: both;
+  z-index: 10;
+}
+.event__bg-img-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/desktop/bg_chess_player_desktop.png");
+  background-repeat: no-repeat;
+  mix-blend-mode: color-burn;
+  resize: both;
+  z-index: 5;
+}
+.event__footer {
+  margin-top: 3rem;
+  font-family: "GolosText", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #3057A2;
+  text-align: left;
+}
+
+@media screen and (max-width: 640px) {
+  .event__wrapper {
+    flex-direction: column;
+  }
+  .event__img-wrapper {
+    flex-basis: 374px;
+    height: 420px;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .event__bg-img {
+    background-position: center;
+    background-size: cover;
+  }
+  .event__bg-img-mask {
+    background-position: center;
+    background-size: cover;
+  }
+  .event__heading {
+    max-width: 100%;
+    margin-bottom: 2.75rem;
+  }
+  .event__item {
+    display: block;
+  }
+  .event__item:first-child > .event__info {
+    padding-top: 0.75rem;
+  }
+  .event__name, .event__info {
+    display: block;
+  }
+  .event__name {
+    padding-bottom: 0;
+  }
+  .event__info {
+    border-left-width: 0;
+    padding-left: 0;
+    padding-top: 0.75rem;
+  }
+  .event__footer {
+    margin-top: 2.5rem;
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .event__wrapper {
+    flex-direction: column;
+  }
+  .event__img-wrapper {
+    width: 100%;
+    height: 474px;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .event__bg-img {
+    background-size: contain;
+  }
+  .event__bg-img-mask {
+    background-size: contain;
+  }
+  .event__heading {
+    max-width: 100%;
+  }
+  .event__table {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

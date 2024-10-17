@@ -1,0 +1,195 @@
+@import '../../abstracts/variables';
+@import '../../abstracts/mixins';
+
+.cta {
+
+  &__group {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__inner {
+    position: relative;
+    max-width: 542px;
+    z-index: 50;
+  }
+
+  &__heading {
+    margin-top: 2.5rem;
+    font: {
+      family: $heading-font;
+      size: setFontSizeRem($rf-size, 60);
+      weight: 400;
+    };
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  &__paragraph {
+    margin-top: 1.5rem;
+    font: {
+      family: $main-font;
+      size: setFontSizeRem($rf-size, 18);
+      weight: 400;
+    };
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  &__text {
+    display: inline-block;
+    text-align: left;
+
+    &_top {
+      white-space: pre-line;
+    }
+
+    &_middle {
+      margin-left: 91px;
+    }
+
+    &_bottom {
+      white-space: pre;
+      margin-left: 38px;
+    }
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  &__btn {
+    display: inline-block;
+    width: 100%;
+    height: 4.5rem;
+    padding: 0 3.0625rem;
+    border-radius: 9999px;
+    align-content: center;
+    border: 2px solid;
+    font: {
+      family: $main-font;
+      size: setFontSizeRem($rf-size, 16);
+      weight: 500;
+    };
+    line-height: 1.3;
+    text-decoration: none;
+    transition: background-color, color $animation-duration cubic-bezier($animation-timing) 0s;
+
+    &_left {
+      background-color: $controls-btn-bg;
+      color: #ffffff;
+      border-color: transparent;
+
+      &:hover {
+        background-color: $controls-btn-bg-hvr;
+        color: $controls-btn-bg;
+      }
+    }
+
+    &_right {
+      background-color: transparent;
+      color: $controls-btn-bg;
+      border-color: $controls-btn-bg;
+
+      &:hover {
+        background-color: $controls-btn-bg;
+        border-color: $controls-btn-bg;
+        color: #ffffff;
+      }
+
+    }
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .cta {
+
+    &__heading {
+      font-size: setFontSizeRem($rf-size, 36);
+      line-height: 1.1;
+    }
+
+    .controls__icon {
+      width: 7px;
+      height: 14px;
+    }
+
+    &__btn {
+      height: 2.9375rem;
+      padding: 0 2.6875rem;
+
+      &_right {
+        background-color: transparentize(#ffffff, 0.1);
+        border-color: transparentize(#ffffff, 0.1);
+      }
+    }
+
+    &__btn-wrapper {
+      flex-direction: column;
+    }
+
+    &__group {
+      display: flex;
+      flex-flow: column wrap;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cta {
+
+    &__wrapper {
+      justify-content: center;
+    }
+
+    &__btn-wrapper {
+      flex-direction: column;
+    }
+
+    &__paragraph {
+      font: {
+        size: setFontSizeRem($rf-size, 20);
+      };
+    }
+
+    &__btn {
+
+      font: {
+        size: setFontSizeRem($rf-size, 18);
+      };
+
+      &_right {
+        background-color: transparentize(#ffffff, 0.1);
+        border-color: transparentize(#ffffff, 0.1);
+      }
+    }
+
+    &__text {
+      display: inline;
+      text-align: center;
+
+      &_middle {
+        margin-left: 0;
+      }
+
+      &_bottom {
+        margin-left: 0;
+      }
+    }
+
+    &__group {
+      display: flex;
+      flex-flow: column wrap;
+    }
+  }
+}

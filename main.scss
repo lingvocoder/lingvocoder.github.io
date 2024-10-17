@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+// 1. Утилиты
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// 2. Вендоры
+@import 'vendors/normalize';
+
+// 3. Базовые стили и типографика
+@import 'base/base';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/helpers';
+
+// 4. Структурные компоненты
+@import 'layout/content';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/section';
+
+// 5. Компоненты
+@import 'components/announcement/styles';
+@import 'components/controls/styles';
+@import 'components/slide/styles';
+@import 'components/carousel/styles';
+@import 'components/infiniteCarousel/styles';
+@import 'components/cta/styles';
+@import 'components/ellipse/styles';
+@import 'components/event/styles';
+@import 'components/grid/styles';
+@import 'components/logo/styles';
+@import 'components/marquee/styles';
+
+

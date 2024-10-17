@@ -1,0 +1,10 @@
+/**
+ * Основные стили для шрифта
+ */
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+body {
+  color: $main-text-color;
+  line-height: 1.1;
+}

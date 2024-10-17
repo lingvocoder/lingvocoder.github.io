@@ -1,0 +1,29 @@
+.footer {
+  margin-top: 0;
+  background-color: #E9DED4;
+}
+.footer__wrapper {
+  margin: 0 auto;
+  max-width: 1366px;
+}
+.footer__inner {
+  position: relative;
+  padding: 2.5rem 72px 72px;
+}
+.footer__text {
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1rem;
+  font-family: "GolosText", sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  color: rgba(49, 49, 49, 0.6);
+}
+
+@media screen and (max-width: 640px) {
+  .footer__inner {
+    padding: 2.5rem 1.25rem 60px;
+  }
+}
+
+/*# sourceMappingURL=_footer.css.map */

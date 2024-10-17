@@ -1,0 +1,27 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+$footer-pb: 60px;
+$footer-pb-lg: 72px;
+$text-footer-color: rgba(49, 49, 49, 0.6);
+
+.footer {
+  margin-top: 0;
+  background-color: $footer-bg;
+
+  &__wrapper{
+    position: relative;
+  }
+
+  &__text {
+    margin: 0 auto;
+    text-align: left;
+    font: {
+      size: setFontSizeRem($rf-size, 16);
+      family: $main-font;
+      weight: normal;
+    };
+    line-height: 1.2;
+    color: $text-footer-color;
+  }
+}

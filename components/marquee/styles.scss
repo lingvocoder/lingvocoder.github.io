@@ -1,0 +1,80 @@
+@import "../../animations/styles";
+@import "../../abstracts/variables";
+@import "../../abstracts/mixins";
+
+$marquee-animation-duration: 15000ms;
+$marquee-py-lg: 1.125rem;
+$marquee-py-sm: 0.625rem;
+$marquee-px: 0.75rem;
+$marquee-text-color: #ffffff;
+
+.marquee {
+
+  display: flex;
+  flex-direction: row;
+  line-height: 1.1;
+  text-transform: uppercase;
+  overflow: hidden;
+  background-color: $marquee-bg;
+
+  &:hover > .marquee__row {
+    animation-play-state: paused;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-shrink: 0;
+    animation: marquee;
+    animation-duration: $marquee-animation-duration;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  &__item {
+    width: auto;
+    padding: $marquee-py-lg $marquee-px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__separator {
+    width: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $marquee-text-color;
+  }
+
+  &__text {
+    font: {
+      size: setFontSizeRem($rf-size, 22);
+      family: $heading-font;
+    };
+    line-height: 1.1;
+    color: #ffffff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    &__row {
+      animation: none;
+      -webkit-animation: none;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .marquee {
+    &__item {
+      padding: $marquee-py-sm $marquee-px;
+    }
+
+    &__text {
+      font-size: setFontSizeRem($rf-size, 16);
+      line-height: 1.1;
+    }
+  }
+}

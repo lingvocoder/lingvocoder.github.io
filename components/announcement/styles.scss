@@ -1,0 +1,100 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/variables";
+
+
+$announcement-img-h: 250px;
+$announcement-img-w: 394px;
+
+.announcement {
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__heading {
+    flex-basis: 62.5%;
+    font: {
+      family: $heading-font;
+      size: setFontSizeRem($rf-size, 36);
+      weight: 400;
+    };
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.35;
+
+    &_highlight {
+      color: $marquee-bg;
+      font-weight: 700;
+    }
+    &_top {
+      margin-bottom: 0;
+    }
+    &_bottom {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__image {
+    position: absolute;
+    height: $announcement-img-h;
+    width: $announcement-img-w;
+    right: 0;
+    top: calc((100% - $announcement-img-h) / 2);
+    background-image: url("../../assets/desktop/players_desktop.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__hidden {
+    &_sm {
+      display: none;
+    }
+
+    &_lg {
+      display: inline-block;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .announcement {
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__heading {
+      font: {
+        size: setFontSizeRem($rf-size, 28);
+      };
+      &_top {
+        margin-bottom: 1.5rem;
+      }
+
+      &_bottom {
+        margin-top: 1.5rem;
+      }
+    }
+
+    &__hidden {
+      &_sm {
+        display: inline-block;
+      }
+
+      &_lg {
+        display: none;
+      }
+    }
+
+    &__image {
+      position: relative;
+      width: 100%;
+    }
+  }
+}

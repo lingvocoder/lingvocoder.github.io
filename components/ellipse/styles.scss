@@ -1,0 +1,67 @@
+@import "../../abstracts/variables";
+@import "../../abstracts/mixins";
+@import "../../animations/styles";
+
+$circle-animation-duration: 30000ms;
+
+.ellipse {
+  position: relative;
+  top: -2.75rem;
+  left: 3.6875rem;
+  margin-top: -5rem;
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: auto;
+    width: 100%;
+    animation: rotateCircleText;
+    animation-duration: $circle-animation-duration;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    mix-blend-mode: overlay;
+    z-index: 10;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+
+    &-ellipse {
+      transform: scale(1.0328125);
+    }
+
+    &-text {
+      transform: none;
+    }
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  .ellipse {
+    width: 18.5625rem;
+    height: 18.5625rem;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .ellipse {
+    top: 0;
+    left: 0;
+    margin: -5rem auto;
+
+    &__img {
+      width: 90%;
+    }
+  }
+}

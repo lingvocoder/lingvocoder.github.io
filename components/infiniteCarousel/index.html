@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Разблокировать для корректного отображения-->
+<!--    <link rel="stylesheet" href="../vendors/normalize.css">-->
+<!--    <link rel="stylesheet" href="../../main.css">-->
+<!--    <link rel="stylesheet" href="../slide/styles.css">-->
+<!--    <link rel="stylesheet" href="../controls/styles.css">-->
+<!--    <link rel="stylesheet" href="styles.css">-->
+    <title>Infinite carousel</title>
+</head>
+<body>
+<div class="inf-carousel">
+    <h2 class="inf-carousel__heading">Участники турнира</h2>
+    <div class="inf-carousel__wrapper">
+        <ul class="inf-carousel__container">
+            <li data-id="1" class="slide">
+                <img class="slide__img" src="../../assets/desktop/silhouette_desktop.png" alt="Силуэт шахматиста"/>
+                <h3 class="slide__name">Хозе-Рауль Капабланка</h3>
+                <p class="slide__title">Чемпион мира по шахматам</p>
+                <a class="slide__btn">Подробнее</a>
+            </li>
+            <li data-id="2" class="slide">
+                <img class="slide__img" src="../../assets/desktop/silhouette_desktop.png" alt="Силуэт шахматиста"/>
+                <h3 class="slide__name">Эммануил Ласкер</h3>
+                <p class="slide__title">Чемпион мира по шахматам</p>
+                <a class="slide__btn">Подробнее</a>
+            </li>
+            <li data-id="3" class="slide">
+                <img class="slide__img" src="../../assets/desktop/silhouette_desktop.png" alt="Силуэт шахматиста"/>
+                <h3 class="slide__name">Александр Алехин</h3>
+                <p class="slide__title">Чемпион мира по шахматам</p>
+                <a class="slide__btn">Подробнее</a>
+            </li>
+            <li data-id="4" class="slide">
+                <img class="slide__img" src="../../assets/desktop/silhouette_desktop.png" alt="Силуэт шахматиста"/>
+                <h3 class="slide__name">Харон Нимцович</h3>
+                <p class="slide__title">Чемпион мира по шахматам</p>
+                <a class="slide__btn">Подробнее</a>
+            </li>
+            <li data-id="5" class="slide">
+                <img class="slide__img" src="../../assets/desktop/silhouette_desktop.png" alt="Силуэт шахматиста"/>
+                <h3 class="slide__name">Рихард Рети</h3>
+                <p class="slide__title">Чемпион мира по шахматам</p>
+                <a class="slide__btn">Подробнее</a>
+            </li>
+            <li data-id="6" class="slide">
+                <img class="slide__img" src="../../assets/desktop/silhouette_desktop.png" alt="Силуэт шахматиста"/>
+                <h3 class="slide__name">Остап Бендер</h3>
+                <p class="slide__title">Гроссмейстер</p>
+                <a class="slide__btn">Подробнее</a>
+            </li>
+        </ul>
+    </div>
+    <div class="controls" style="--controls-gap:0.875rem;">
+        <div class="controls__wrapper">
+            <button type="button"
+                    class="controls__btn controls__btn_prev">
+                <svg class="controls__icon" width="18px" height="10px" viewBox="0 0 10 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.07664 15.923L1.15357 8.9999L8.07664 2.07682" stroke="white" stroke-width="1.63636"
+                          stroke-linecap="square"/>
+                </svg>
+            </button>
+            <p class="controls__counter">
+                <span class="controls__readings controls__readings_active">3</span>
+                <span class="controls__readings">6</span>
+            </p>
+            <button type="button"
+                    class="controls__btn controls__btn_next">
+                <svg class="controls__icon" width="18px" height="10px" viewBox="0 0 10 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.92336 2.0769L8.84644 8.99998L1.92336 15.9231" stroke="white" stroke-width="1.63636"
+                          stroke-linecap="square"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

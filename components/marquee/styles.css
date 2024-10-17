@@ -1,0 +1,74 @@
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes rotateCircleText {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.marquee {
+  display: flex;
+  flex-direction: row;
+  line-height: 1.1;
+  text-transform: uppercase;
+  overflow: hidden;
+  background-color: #F54932;
+}
+.marquee:hover > .marquee__row {
+  animation-play-state: paused;
+}
+.marquee__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-shrink: 0;
+  animation: marquee;
+  animation-duration: 15000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.marquee__item {
+  width: auto;
+  padding: 1.125rem 0.75rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+.marquee__separator {
+  width: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.marquee__text {
+  font-size: 1.375rem;
+  font-family: "Merriweather";
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__row {
+    animation: none;
+    -webkit-animation: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .marquee__item {
+    padding: 0.625rem 0.75rem;
+  }
+  .marquee__text {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+}
+
+/*# sourceMappingURL=_footer.css.map */

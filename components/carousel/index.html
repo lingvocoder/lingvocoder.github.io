@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../vendors/normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Carousel</title>
+</head>
+<body>
+<div class="container">
+    <div class="carousel">
+        <h2 class="carousel__heading">Этапы преображения Васюков</h2>
+        <p class="carousel__subheading">Будущие источники обогащения васюкинцев</p>
+        <div class="carousel__wrapper">
+            <div class="carousel__banner"></div>
+            <ul class="carousel__container">
+                <li data-id="1" class="carousel__slide">
+                    <div data-slot-id="1" class="carousel__slot">
+                        <p class="carousel__text">Строительство железнодорожной магистрали Москва-Васюки</p>
+                    </div>
+                    <div data-slot-id="2" class="carousel__slot">
+                        <p class="carousel__text">Открытие фешенебельной гостиницы «Проходная пешка» и других
+                            небоскрёбов</p>
+                    </div>
+                </li>
+                <li data-id="2" class="carousel__slide">
+                    <div data-slot-id="3" class="carousel__slot">
+                        <p class="carousel__text">Поднятие сельского хозяйства в радиусе на тысячу километров:
+                            производство овощей, фруктов, икры, шоколадных конфет</p>
+                    </div>
+                </li>
+                <li data-id="3" class="carousel__slide">
+                    <div data-slot-id="4" class="carousel__slot">
+                        <p class="carousel__text">Строительство дворца для турнира</p>
+                    </div>
+                    <div data-slot-id="5" class="carousel__slot">
+                        <p class="carousel__text">Размещение гаражей для гостевого автотранспорта</p>
+                    </div>
+                </li>
+                <li data-id="4" class="carousel__slide">
+                    <div data-slot-id="6" class="carousel__slot">
+                        <p class="carousel__text">Постройка сверхмощной радиостанции для передачи всему миру
+                            сенсационных результатов</p>
+                    </div>
+                </li>
+                <li data-id="5" class="carousel__slide">
+                    <div data-slot-id="7" class="carousel__slot">
+                        <p class="carousel__text">Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых
+                            самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="controls" style="--controls-gap:1rem;">
+            <div class="controls__wrapper">
+                <button type="button" class="controls__btn controls__btn_prev">
+                    <svg class="controls__icon" width="18px" height="10px" viewBox="0 0 10 18" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.07664 15.923L1.15357 8.9999L8.07664 2.07682" stroke="white" stroke-width="1.63636"
+                              stroke-linecap="square"/>
+                    </svg>
+                </button>
+                <div class="controls__select">
+                    <button type="button" data-id="1"
+                            class="controls__select-btn"></button>
+                    <button type="button" data-id="2"
+                            class="controls__select-btn"></button>
+                    <button type="button" data-id="3"
+                            class="controls__select-btn"></button>
+                    <button type="button" data-id="4"
+                            class="controls__select-btn"></button>
+                    <button type="button" data-id="5"
+                            class="controls__select-btn"></button>
+                </div>
+                <button type="button" class="controls__btn controls__btn_next">
+                    <svg class="controls__icon" width="18px" height="10px" viewBox="0 0 10 18" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.92336 2.0769L8.84644 8.99998L1.92336 15.9231" stroke="white" stroke-width="1.63636"
+                              stroke-linecap="square"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// Базовые стили для проекта.
+// -----------------------------------------------------------------------------
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/functions";
+
+html, body {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: none;
+}
+h1, h2, h3, h4 {
+  font: {
+    weight: 700;
+  };
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin-bottom: 16px;
+}
+
+h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}

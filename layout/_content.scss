@@ -1,0 +1,53 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+$content-max-w: 85.375rem;
+$content-px-lg: 4.5rem;
+$content-px-md: 2.25rem;
+$content-px-sm: 1.25rem;
+$content-header-pt-lg: 1.625rem;
+$content-header-pt-sm: 1.125rem;
+$content-footer-pt-lg: 2.5rem;
+$content-footer-pt-sm: 2.5rem;
+$content-footer-pb-lg: 4.5rem;
+$content-footer-pb-sm: 3.75rem;
+
+.content {
+  max-width: $content-max-w;
+  height: 100%;
+  padding-left: $content-px-lg;
+  padding-right: $content-px-lg;
+  margin: 0 auto;
+
+  &_top {
+    padding-top: $content-header-pt-lg;
+  }
+
+  &_bottom {
+    padding-top: $content-footer-pt-lg;
+    padding-bottom: $content-footer-pb-lg;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    padding-left: $content-px-sm;
+    padding-right: $content-px-sm;
+
+    &_top {
+      padding-top: $content-header-pt-sm;
+    }
+
+    &_bottom {
+      padding-top: $content-footer-pt-sm;
+      padding-bottom: $content-footer-pb-sm;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .content {
+    padding-left: $content-px-md;
+    padding-right: $content-px-md;
+  }
+}

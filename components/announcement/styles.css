@@ -1,0 +1,69 @@
+.announcement__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.announcement__heading {
+  flex-basis: 62.5%;
+  font-family: "Merriweather";
+  font-size: 2.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 1.35;
+}
+.announcement__heading_highlight {
+  color: #F54932;
+  font-weight: 700;
+}
+.announcement__heading_top {
+  margin-bottom: 0;
+}
+.announcement__heading_bottom {
+  margin-bottom: 0;
+}
+.announcement__image {
+  position: absolute;
+  height: 250px;
+  width: 394px;
+  right: 0;
+  top: calc((100% - 250px) / 2);
+  background-image: url("../../assets/desktop/players_desktop.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.announcement__hidden_sm {
+  display: none;
+}
+.announcement__hidden_lg {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1024px) {
+  .announcement__wrapper {
+    flex-direction: column;
+  }
+  .announcement__heading {
+    font-size: 1.75rem;
+  }
+  .announcement__heading_top {
+    margin-bottom: 1.5rem;
+  }
+  .announcement__heading_bottom {
+    margin-top: 1.5rem;
+  }
+  .announcement__hidden_sm {
+    display: inline-block;
+  }
+  .announcement__hidden_lg {
+    display: none;
+  }
+  .announcement__image {
+    position: relative;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

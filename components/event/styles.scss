@@ -1,0 +1,241 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/variables";
+
+.event {
+
+  &__heading {
+    max-width: 42rem;
+    margin-bottom: 3.75rem;
+    font: {
+      family: $heading-font;
+      size: setFontSizeRem($rf-size, 36);
+      weight: 400;
+    };
+    text-transform: uppercase;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  &__subheading {
+    font: {
+      family: $heading-font;
+      size: setFontSizeRem($rf-size, 36);
+      weight: 700;
+    };
+    line-height: inherit;
+    text-transform: uppercase;
+    color: $marquee-bg;
+  }
+
+  &__wrapper {
+    display: flex;
+    margin-top: 1.75rem;
+  }
+
+  &__table {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    flex-basis: 44rem;
+  }
+
+  &__list {
+    border-color: $event-border-color;
+    font-family: $main-font;
+    font-size: setFontSizeRem($rf-size, 20);
+    line-height: 1.2;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 1rem;
+    text-align: left;
+
+    &_top {
+      border-top: 2px solid $event-border-color;
+    }
+
+    &:last-child {
+      & > .event__info {
+        padding-bottom: 0;
+      }
+
+      & > .event__name {
+        padding-bottom: 0;
+      }
+    }
+
+    &:first-child {
+      & > .event__info {
+        padding-top: 0;
+      }
+
+      & > .event__name {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__name {
+    padding: 1rem 0 1rem 0;
+    font: {
+      weight: 400;
+    }
+    color: transparentize($main-text-color, 0.3);
+  }
+
+  &__info {
+    padding: 1rem 0 1rem 1rem;
+    font: {
+      weight: 600;
+    }
+    color: $main-text-color;
+    border-left: 2px solid $event-border-color;
+    grid-column: 2 / 2;
+
+    &_extra {
+      text-decoration: line-through;
+      text-decoration-color: $marquee-bg;
+    }
+  }
+
+  &__img-wrapper {
+    display: flex;
+    position: relative;
+    flex-basis: 474px;
+    height: 527px;
+    margin-right: 2.75rem;
+  }
+
+  &__bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/desktop/chess-player.png");
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-color: #ffffff;
+    resize: both;
+    z-index: 10;
+  }
+
+  &__bg-img-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/desktop/bg_chess_player_desktop.png");
+    background-repeat: no-repeat;
+    mix-blend-mode: color-burn;
+    resize: both;
+    z-index: 5;
+  }
+
+  &__footer {
+    margin-top: 3rem;
+    font: {
+      family: $main-font;
+      size: setFontSizeRem($rf-size, 20);
+      weight: 400;
+    }
+    line-height: 1.2;
+    color: $btn-text-color;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .event {
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__img-wrapper {
+      flex-basis: 374px;
+      height: 420px;
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    &__bg-img {
+      background-position: center;
+      background-size: cover;
+    }
+
+    &__bg-img-mask {
+      background-position: center;
+      background-size: cover;
+    }
+
+    &__heading {
+      max-width: 100%;
+      margin-bottom: 2.75rem;
+    }
+
+    &__item {
+      display: block;
+
+      &:first-child {
+        & > .event__info {
+          padding-top: 0.75rem;
+        }
+      }
+    }
+
+    &__name, &__info {
+      display: block;
+    }
+
+    &__name {
+      padding-bottom: 0;
+    }
+
+    &__info {
+      border-left-width: 0;
+      padding-left: 0;
+      padding-top: 0.75rem;
+    }
+
+    &__footer {
+      margin-top: 2.5rem;
+      font-size: setFontSizeRem($rf-size, 18);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .event {
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__img-wrapper {
+      width: 100%;
+      height: 474px;
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    &__bg-img {
+      background-size: contain;
+    }
+
+    &__bg-img-mask {
+      background-size: contain;
+    }
+
+    &__heading {
+      max-width: 100%;
+    }
+
+    &__table {
+      display: flex;
+      flex-flow: column;
+      flex-grow: 1;
+      flex-basis: auto;
+    }
+
+  }
+}

@@ -1,0 +1,135 @@
+@import "../../abstracts/variables";
+@import "../../abstracts/mixins";
+
+$counter-height: 2.25rem;
+$grid-item-p: 1.25rem;
+$grid-counter-offset: 1.25rem;
+$text-left-offset: 1rem;
+$sub-heading-text-color: #3057A2;
+
+.grid {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-rows: 112px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+
+  }
+
+  &__heading {
+    max-width: calc(((100% - 1.25rem) / 3) * 2);
+    margin-bottom: 3.375rem;
+    width: auto;
+    font: {
+      family: $heading-font;
+      size: setFontSizeRem($rf-size, 54);
+      weight: 400;
+    };
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+
+    &:after {
+      position: relative;
+      content: "Будущие источники обогащения васюкинцев";
+      display: inline-block;
+      max-width: 280px;
+      word-break: break-word;
+      margin-left: 1rem;
+      text-transform: none;
+      font: {
+        family: $main-font;
+        size: setFontSizeRem($rf-size, 20);
+        weight: normal;
+      };
+      line-height: 1.2;
+      color: $sub-heading-text-color;
+    }
+  }
+
+  &__text {
+    margin-left: $text-left-offset;
+    font: {
+      family: $main-font;
+      size: setFontSizeRem($rf-size, 20);
+      weight: 500;
+    };
+    text-align: left;
+    line-height: 1.2;
+  }
+
+  &__item {
+    position: relative;
+    background-image: url("../../assets/common/CooperUnionStampPaper.png"), url("../../assets/common/bg.png");
+    padding: $grid-item-p $grid-item-p $grid-item-p calc($counter-height + $grid-counter-offset);
+
+    &[data-id="3"] {
+      grid-template-rows: subgrid;
+      grid-row: span 2;
+    }
+
+    &[data-id="7"] {
+      display: flex;
+      grid-template-columns: subgrid;
+      grid-column: span 2 / span 4;
+
+      & .grid__text {
+        max-width: 446px;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      left: $grid-counter-offset;
+      top: $grid-counter-offset;
+      content: attr(data-id);
+      width: $counter-height;
+      height: $counter-height;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      background-color: #ffffff;
+      font: {
+        size: setFontSizeRem($rf-size, 20);
+        family: $main-font;
+        weight: 600;
+      };
+      line-height: 1.2;
+    }
+  }
+
+  &__illustration {
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    width: 376px;
+    height: 140px;
+  }
+
+  &__image {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    top: -60%;
+    object-fit: cover;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    &__wrapper {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@import "../../abstracts/variables";
+@import "../../abstracts/mixins";
+
+$carousel-btn-height-lg: 2.75rem;
+
+.controls {
+  position: absolute;
+  right: 0;
+  order: 2;
+  display: flex;
+  justify-content: center;
+  font-family: $main-font;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc((65px - $carousel-btn-height-lg) / 2);
+    gap: var(--controls-gap);
+  }
+
+  &__select {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.375rem;
+  }
+
+  &__select-btn {
+    display: block;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-width: 0;
+    border-radius: 9999px;
+    background-color: $controls-btn-bg-idle;
+    cursor: pointer;
+
+    &_active {
+      background-color: $controls-btn-bg;
+    }
+
+    &:active, &:focus {
+      background-color: $controls-btn-bg;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-width: 0;
+    border-radius: 9999px;
+    background-color: $controls-btn-bg;
+    cursor: pointer;
+    transition: background-color $animation-duration cubic-bezier($animation-timing) 0s;
+
+    &:hover {
+      background-color: $controls-btn-bg-hvr;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      background-color: $controls-btn-bg-idle;
+    }
+  }
+
+  &__icon {
+    width: 10px;
+    height: 18px;
+  }
+
+  &__counter {
+    font: {
+      size: setFontSizeRem($rf-size, 16);
+      weight: 400;
+    };
+    line-height: 1.2;
+  }
+
+  &__readings {
+    color: transparentize($main-text-color, 0.6);
+
+    &_active {
+      color: $main-text-color;
+    }
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+
+  .controls {
+    position: relative;
+    margin-top: 2.5rem;
+
+    &__btn {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .controls {
+    position: relative;
+    margin-top: 2.5rem;
+
+    &__btn {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+  }
+}

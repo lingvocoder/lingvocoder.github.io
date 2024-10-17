@@ -1,0 +1,122 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+$header-bg: $header-bg;
+$header-height-lg: 700px;
+$header-width-xl: 1920px;
+$header-height-sm: 812px;
+
+.header {
+  position: relative;
+  min-height: $header-height-lg;
+  max-width: $header-width-xl;
+  background-color: $header-bg;
+  overflow: hidden;
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/desktop/mask_overlay_desktop.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    mix-blend-mode: color-burn;
+    z-index: 40;
+  }
+
+  &__city {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/desktop/city_desktop_xl.png");
+    background-repeat: no-repeat;
+    background-position: 37% bottom;
+    background-size: 130% auto;
+    resize: both;
+    z-index: 30;
+  }
+
+  &__knight {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/desktop/kon-white_desktop.png");
+    background-repeat: no-repeat;
+    background-position: 73.5% 100%;
+    background-size: 13% auto;
+    resize: both;
+    z-index: 40;
+  }
+
+  &__pawn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: -1.4%;
+    background-image: url("../assets/desktop/peshka_desktop.png");
+    background-repeat: no-repeat;
+    background-position: 96% 100%;
+    background-size: 5% auto;
+    resize: both;
+    z-index: 40;
+  }
+
+  &__queen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: -19%;
+    background-image: url("../assets/desktop/queen_desktop.png");
+    background-repeat: no-repeat;
+    background-position: 88.5% 100%;
+    background-size: 10% auto;
+    resize: both;
+    z-index: 20;
+  }
+
+  &__king {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: -9%;
+    background-image: url("../assets/desktop/king_desktop.png");
+    background-repeat: no-repeat;
+    background-position: 62.5% 100%;
+    background-size: 10% auto;
+    resize: both;
+    z-index: 20;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header {
+    min-height: $header-height-sm;
+
+    &__city {
+      background-position: 74% bottom;
+      background-size: 290% 58%;
+    }
+
+    &__knight {
+      background-size: 33% auto;
+      background-position: 50% bottom;
+    }
+
+    &__pawn {
+      display: none;
+    }
+
+    &__queen {
+      margin-top: 0;
+      background-position: 70% 70%;
+      background-size: 17% auto;
+    }
+
+    &__king {
+      margin-top: 0;
+      background-position: 16.5% 80%;
+      background-size: 16% auto;
+    }
+  }
+}
