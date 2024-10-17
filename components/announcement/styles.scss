@@ -2,8 +2,9 @@
 @import "../../abstracts/variables";
 
 
-$announcement-img-h: 250px;
-$announcement-img-w: 394px;
+$announcement-img-h-lg: 15.625rem;
+$announcement-img-h-sm: 13.25rem;
+$announcement-img-w-lg: 24.625rem;
 
 .announcement {
 
@@ -29,9 +30,11 @@ $announcement-img-w: 394px;
       color: $marquee-bg;
       font-weight: 700;
     }
+
     &_top {
       margin-bottom: 0;
     }
+
     &_bottom {
       margin-bottom: 0;
     }
@@ -40,10 +43,10 @@ $announcement-img-w: 394px;
 
   &__image {
     position: absolute;
-    height: $announcement-img-h;
-    width: $announcement-img-w;
+    height: $announcement-img-h-lg;
+    width: $announcement-img-w-lg;
     right: 0;
-    top: calc((100% - $announcement-img-h) / 2);
+    top: calc((100% - $announcement-img-h-lg) / 2);
     background-image: url("../../assets/desktop/players_desktop.png");
     background-position: center center;
     background-repeat: no-repeat;
@@ -73,6 +76,7 @@ $announcement-img-w: 394px;
       font: {
         size: setFontSizeRem($rf-size, 28);
       };
+
       &_top {
         margin-bottom: 1.5rem;
       }
@@ -94,6 +98,8 @@ $announcement-img-w: 394px;
 
     &__image {
       position: relative;
+      top: 0;
+      height: $announcement-img-h-sm;
       width: 100%;
     }
   }

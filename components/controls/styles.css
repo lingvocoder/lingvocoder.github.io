@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: calc((65px - 2.75rem) / 2);
+  margin-top: 0.65625rem;
   gap: var(--controls-gap);
 }
 .controls__select {

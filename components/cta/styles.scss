@@ -1,6 +1,11 @@
 @import '../../abstracts/variables';
 @import '../../abstracts/mixins';
 
+$cta-heading-mt-lg: 3.875rem;
+$cta-heading-mt-sm: 2.5rem;
+$cta-btn-group-mt-lg: 2.5rem;
+$cta-btn-group-mt-sm: 2rem;
+
 .cta {
 
   &__group {
@@ -16,12 +21,12 @@
 
   &__inner {
     position: relative;
-    max-width: 542px;
+    max-width: 33.875rem;
     z-index: 50;
   }
 
   &__heading {
-    margin-top: 2.5rem;
+    margin-top: $cta-heading-mt-lg;
     font: {
       family: $heading-font;
       size: setFontSizeRem($rf-size, 60);
@@ -64,7 +69,7 @@
     display: flex;
     flex-flow: row nowrap;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: $cta-btn-group-mt-lg;
   }
 
   &__btn {
@@ -115,6 +120,7 @@
   .cta {
 
     &__heading {
+      margin-top: $cta-heading-mt-sm;
       font-size: setFontSizeRem($rf-size, 36);
       line-height: 1.1;
     }
@@ -135,12 +141,45 @@
     }
 
     &__btn-wrapper {
+      gap: 0.875rem;
+      margin-top: $cta-btn-group-mt-sm;
       flex-direction: column;
     }
 
     &__group {
       display: flex;
       flex-flow: column wrap;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .cta {
+
+    &__text {
+      display: inline;
+      text-align: center;
+
+      &_middle {
+        margin-left: 0;
+      }
+
+      &_bottom {
+        white-space: pre;
+        margin-left: 0;
+      }
+    }
+
+    &__heading {
+      text-align: left;
+    }
+
+    &__paragraph {
+      text-align: left;
+    }
+
+    &__btn {
+      padding: 0 1.0625rem;
     }
   }
 }

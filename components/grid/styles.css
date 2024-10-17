@@ -5,7 +5,7 @@
 }
 .grid__inner {
   display: grid;
-  grid-template-rows: 112px;
+  grid-template-rows: auto 7rem;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
 }
@@ -57,7 +57,7 @@
   grid-column: span 2/span 4;
 }
 .grid__item[data-id="7"] .grid__text {
-  max-width: 446px;
+  max-width: 27.875rem;
 }
 .grid__item:before {
   position: absolute;
@@ -76,12 +76,12 @@
   font-weight: 600;
   line-height: 1.2;
 }
-.grid__illustration {
+.grid__banner {
   position: absolute;
   bottom: 0;
   left: 60%;
-  width: 376px;
-  height: 140px;
+  width: 23.5rem;
+  height: 8.75rem;
 }
 .grid__image {
   position: absolute;

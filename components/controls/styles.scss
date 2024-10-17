@@ -2,6 +2,7 @@
 @import "../../abstracts/mixins";
 
 $carousel-btn-height-lg: 2.75rem;
+$carousel-heading-calculated-height-lg: 4.0625rem;
 
 .controls {
   position: absolute;
@@ -15,7 +16,7 @@ $carousel-btn-height-lg: 2.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: calc((65px - $carousel-btn-height-lg) / 2);
+    margin-top: calc(($carousel-heading-calculated-height-lg - $carousel-btn-height-lg) / 2);
     gap: var(--controls-gap);
   }
 

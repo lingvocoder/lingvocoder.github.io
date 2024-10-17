@@ -25,10 +25,10 @@
 }
 .announcement__image {
   position: absolute;
-  height: 250px;
-  width: 394px;
+  height: 15.625rem;
+  width: 24.625rem;
   right: 0;
-  top: calc((100% - 250px) / 2);
+  top: calc((100% - 15.625rem) / 2);
   background-image: url("../../assets/desktop/players_desktop.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -62,6 +62,8 @@
   }
   .announcement__image {
     position: relative;
+    top: 0;
+    height: 13.25rem;
     width: 100%;
   }
 }

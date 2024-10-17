@@ -2,22 +2,26 @@
 @import "../../abstracts/mixins";
 
 $carousel-container-gap: 1.25rem;
+$slide-w-lg: 20rem;
+$slide-w-md: 16.5rem;
+$slide-w-sm: 15.25rem;
 
 .slide {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-basis: calc((100% - ($carousel-container-gap * var(--carousel-visible-slides))) / var(--carousel-visible-slides));
+  flex-basis: calc((100% - ($carousel-container-gap * (var(--carousel-visible-slides) - 1))) / var(--carousel-visible-slides));
   flex-shrink: 0;
 
   &__img {
-    width: 320px;
+    width: $slide-w-lg;
     height: auto;
     object-fit: cover;
   }
 
   &__name {
     margin-top: 1.75rem;
+    margin-bottom: 0;
     font: {
       family: $main-font;
       size: setFontSizeRem($rf-size, 24);
@@ -73,7 +77,7 @@ $carousel-container-gap: 1.25rem;
     flex-basis: 100%;
 
     &__img {
-      width: 244px;
+      width: $slide-w-sm;
     }
 
     &__title {
@@ -88,7 +92,7 @@ $carousel-container-gap: 1.25rem;
   .slide {
 
     &__img {
-      width: 264px;
+      width: $slide-w-md;
     }
 
   }
