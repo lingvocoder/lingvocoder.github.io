@@ -1,0 +1,1536 @@
+@charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: none;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin-bottom: 16px;
+}
+
+h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+@font-face {
+  font-family: "GolosText";
+  src: url("../fonts/Golos_Text/GolosText-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather/Merriweather-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+/**
+ * Основные стили для шрифта
+ */
+body {
+  color: #313131;
+  line-height: 1.1;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.content {
+  max-width: 85.375rem;
+  height: 100%;
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+  margin: 0 auto;
+}
+.content_top {
+  padding-top: 1.625rem;
+}
+.content_bottom {
+  padding-top: 2.5rem;
+  padding-bottom: 4.5rem;
+}
+
+@media screen and (max-width: 640px) {
+  .content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .content_top {
+    padding-top: 1.125rem;
+  }
+  .content_bottom {
+    padding-top: 2.5rem;
+    padding-bottom: 3.75rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .content {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+.header {
+  position: relative;
+  min-height: 700px;
+  max-width: 1920px;
+  background-color: #E9DED4;
+  overflow: hidden;
+}
+.header__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/desktop/mask_overlay_desktop.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  mix-blend-mode: color-burn;
+  z-index: 40;
+}
+.header__city {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/desktop/city_desktop_xl.png");
+  background-repeat: no-repeat;
+  background-position: 37% bottom;
+  background-size: 130% auto;
+  resize: both;
+  z-index: 30;
+}
+.header__knight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/desktop/kon-white_desktop.png");
+  background-repeat: no-repeat;
+  background-position: 73.5% 100%;
+  background-size: 13% auto;
+  resize: both;
+  z-index: 40;
+}
+.header__pawn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: -1.4%;
+  background-image: url("../assets/desktop/peshka_desktop.png");
+  background-repeat: no-repeat;
+  background-position: 96% 100%;
+  background-size: 5% auto;
+  resize: both;
+  z-index: 40;
+}
+.header__queen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: -19%;
+  background-image: url("../assets/desktop/queen_desktop.png");
+  background-repeat: no-repeat;
+  background-position: 88.5% 100%;
+  background-size: 10% auto;
+  resize: both;
+  z-index: 20;
+}
+.header__king {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: -9%;
+  background-image: url("../assets/desktop/king_desktop.png");
+  background-repeat: no-repeat;
+  background-position: 62.5% 100%;
+  background-size: 10% auto;
+  resize: both;
+  z-index: 20;
+}
+
+@media screen and (max-width: 640px) {
+  .header {
+    min-height: 812px;
+  }
+  .header__city {
+    background-position: 74% bottom;
+    background-size: 290% 58%;
+  }
+  .header__knight {
+    background-size: 33% auto;
+    background-position: 50% bottom;
+  }
+  .header__pawn {
+    display: none;
+  }
+  .header__queen {
+    margin-top: 0;
+    background-position: 70% 70%;
+    background-size: 17% auto;
+  }
+  .header__king {
+    margin-top: 0;
+    background-position: 16.5% 80%;
+    background-size: 16% auto;
+  }
+}
+.footer {
+  margin-top: 0;
+  background-color: #E9DED4;
+}
+.footer__wrapper {
+  position: relative;
+}
+.footer__text {
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1rem;
+  font-family: "GolosText", sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  color: rgba(49, 49, 49, 0.6);
+}
+
+.section_a {
+  margin-top: 5rem;
+}
+.section_b {
+  margin-top: 4rem;
+}
+.section_c {
+  margin-top: 12.5rem;
+}
+.section_d {
+  margin-top: 12.5rem;
+  margin-bottom: 8.75rem;
+}
+
+@media screen and (max-width: 640px) {
+  .section_a {
+    margin-top: 3rem;
+  }
+  .section_b {
+    margin-top: 1.3125rem;
+  }
+  .section_c {
+    margin-top: 7.5rem;
+  }
+  .section_d {
+    margin-top: 7.5rem;
+    margin-bottom: 6.25rem;
+  }
+}
+.announcement__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.announcement__heading {
+  flex-basis: 62.5%;
+  font-family: "Merriweather";
+  font-size: 2.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 1.35;
+}
+.announcement__heading_highlight {
+  color: #F54932;
+  font-weight: 700;
+}
+.announcement__heading_top {
+  margin-bottom: 0;
+}
+.announcement__heading_bottom {
+  margin-bottom: 0;
+}
+.announcement__image {
+  position: absolute;
+  height: 250px;
+  width: 394px;
+  right: 0;
+  top: calc((100% - 250px) / 2);
+  background-image: url("../../assets/desktop/players_desktop.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.announcement__hidden_sm {
+  display: none;
+}
+.announcement__hidden_lg {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1024px) {
+  .announcement__wrapper {
+    flex-direction: column;
+  }
+  .announcement__heading {
+    font-size: 1.75rem;
+  }
+  .announcement__heading_top {
+    margin-bottom: 1.5rem;
+  }
+  .announcement__heading_bottom {
+    margin-top: 1.5rem;
+  }
+  .announcement__hidden_sm {
+    display: inline-block;
+  }
+  .announcement__hidden_lg {
+    display: none;
+  }
+  .announcement__image {
+    position: relative;
+    width: 100%;
+  }
+}
+.controls {
+  position: absolute;
+  right: 0;
+  order: 2;
+  display: flex;
+  justify-content: center;
+  font-family: "GolosText", sans-serif;
+}
+.controls__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc((65px - 2.75rem) / 2);
+  gap: var(--controls-gap);
+}
+.controls__select {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.375rem;
+}
+.controls__select-btn {
+  display: block;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-width: 0;
+  border-radius: 9999px;
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+.controls__select-btn_active {
+  background-color: #313131;
+}
+.controls__select-btn:active, .controls__select-btn:focus {
+  background-color: #313131;
+}
+.controls__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-width: 0;
+  border-radius: 9999px;
+  background-color: #313131;
+  cursor: pointer;
+  transition: background-color 200ms cubic-bezier(0.45, 0, 0.55, 1) 0s;
+}
+.controls__btn:hover {
+  background-color: #FBCE51;
+}
+.controls__btn:disabled {
+  pointer-events: none;
+  background-color: #d9d9d9;
+}
+.controls__icon {
+  width: 10px;
+  height: 18px;
+}
+.controls__counter {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.controls__readings {
+  color: rgba(49, 49, 49, 0.4);
+}
+.controls__readings_active {
+  color: #313131;
+}
+
+@media screen and (max-width: 640px) {
+  .controls {
+    position: relative;
+    margin-top: 2.5rem;
+  }
+  .controls__btn {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .controls {
+    position: relative;
+    margin-top: 2.5rem;
+  }
+  .controls__btn {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: calc((100% - 1.25rem * var(--carousel-visible-slides)) / var(--carousel-visible-slides));
+  flex-shrink: 0;
+}
+.slide__img {
+  width: 320px;
+  height: auto;
+  object-fit: cover;
+}
+.slide__name {
+  margin-top: 1.75rem;
+  font-family: "GolosText", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #313131;
+  line-height: 1.2;
+}
+.slide__title {
+  margin-top: 0.375rem;
+  margin-bottom: 1.25rem;
+  font-family: "GolosText", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #838383;
+}
+.slide__btn {
+  display: inline-block;
+  width: auto;
+  height: 2.1875rem;
+  padding: 0 0.75rem;
+  border-radius: 9999px;
+  align-content: center;
+  font-family: "GolosText", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  background: transparent;
+  color: #3057A2;
+  border: 1px solid #3057A2;
+  transition: background-color, color 200ms cubic-bezier(0.45, 0, 0.55, 1) 0s;
+  cursor: pointer;
+}
+.slide__btn:hover {
+  background-color: #3057A2;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 640px) {
+  .slide {
+    flex-basis: 100%;
+  }
+  .slide__img {
+    width: 244px;
+  }
+  .slide__title {
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .slide__img {
+    width: 264px;
+  }
+}
+.carousel {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 20.9375rem;
+}
+.carousel__wrapper {
+  position: relative;
+  margin-top: 148px;
+}
+.carousel__heading {
+  font-size: 2.25rem;
+  font-family: "Merriweather";
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+.carousel__subheading {
+  font-family: "GolosText", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #3057A2;
+  text-align: left;
+}
+.carousel__container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+  list-style: none;
+  transition: transform 450ms cubic-bezier(0.4, 0, 1, 1) 0s;
+  will-change: transform;
+}
+.carousel__slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  padding: 3rem 1.5rem 1.25rem 1.25rem;
+  background-image: url("../../assets/common/CooperUnionStampPaper_tall.png"), url("../../assets/desktop/bg_chess_player_desktop.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carousel__slot {
+  position: relative;
+  padding-left: 3.25rem;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+.carousel__slot:before {
+  position: absolute;
+  width: 2.25rem;
+  height: 2.25rem;
+  top: 0.875rem;
+  left: 0;
+  content: attr(data-slot-id);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "GolosText", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  border-radius: 9999px;
+  background-color: #ffffff;
+}
+.carousel__text {
+  font-family: "GolosText", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-align: left;
+  line-height: 1.2;
+}
+.carousel__banner {
+  position: absolute;
+  top: -60%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/mobile/plane_mobile.png");
+  background-position: top 40px left 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 10;
+}
+
+@media screen and (max-width: 640px) {
+  .carousel {
+    display: flex;
+    max-width: 20.9375rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .carousel {
+    display: flex;
+    max-width: 26.25rem;
+  }
+  .carousel__banner {
+    top: -70%;
+    background-position: top 10px left 10px;
+  }
+}
+.inf-carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.inf-carousel__wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 1px;
+  order: 1;
+}
+.inf-carousel__heading {
+  margin-bottom: 2.5rem;
+  font-size: 3.375rem;
+  font-family: "Merriweather";
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.inf-carousel__container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1.25rem;
+  list-style: none;
+  transition: transform 450ms cubic-bezier(0.4, 0, 1, 1) 0s;
+  will-change: transform;
+}
+.inf-carousel__text {
+  font-family: "GolosText", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  text-align: left;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 640px) {
+  .inf-carousel__container {
+    gap: 0;
+  }
+  .inf-carousel__heading {
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .inf-carousel__heading {
+    text-align: center;
+  }
+}
+.cta__group {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.cta__wrapper {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.cta__inner {
+  position: relative;
+  max-width: 542px;
+  z-index: 50;
+}
+.cta__heading {
+  margin-top: 2.5rem;
+  font-family: "Merriweather";
+  font-size: 3.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.cta__paragraph {
+  margin-top: 1.5rem;
+  font-family: "GolosText", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.3;
+}
+.cta__text {
+  display: inline-block;
+  text-align: left;
+}
+.cta__text_top {
+  white-space: pre-line;
+}
+.cta__text_middle {
+  margin-left: 91px;
+}
+.cta__text_bottom {
+  white-space: pre;
+  margin-left: 38px;
+}
+.cta__btn-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.cta__btn {
+  display: inline-block;
+  width: 100%;
+  height: 4.5rem;
+  padding: 0 3.0625rem;
+  border-radius: 9999px;
+  align-content: center;
+  border: 2px solid;
+  font-family: "GolosText", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: background-color, color 200ms cubic-bezier(0.45, 0, 0.55, 1) 0s;
+}
+.cta__btn_left {
+  background-color: #313131;
+  color: #ffffff;
+  border-color: transparent;
+}
+.cta__btn_left:hover {
+  background-color: #FBCE51;
+  color: #313131;
+}
+.cta__btn_right {
+  background-color: transparent;
+  color: #313131;
+  border-color: #313131;
+}
+.cta__btn_right:hover {
+  background-color: #313131;
+  border-color: #313131;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 640px) {
+  .cta__heading {
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
+  .cta .controls__icon {
+    width: 7px;
+    height: 14px;
+  }
+  .cta__btn {
+    height: 2.9375rem;
+    padding: 0 2.6875rem;
+  }
+  .cta__btn_right {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+  }
+  .cta__btn-wrapper {
+    flex-direction: column;
+  }
+  .cta__group {
+    display: flex;
+    flex-flow: column wrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cta__wrapper {
+    justify-content: center;
+  }
+  .cta__btn-wrapper {
+    flex-direction: column;
+  }
+  .cta__paragraph {
+    font-size: 1.25rem;
+  }
+  .cta__btn {
+    font-size: 1.125rem;
+  }
+  .cta__btn_right {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+  }
+  .cta__text {
+    display: inline;
+    text-align: center;
+  }
+  .cta__text_middle {
+    margin-left: 0;
+  }
+  .cta__text_bottom {
+    margin-left: 0;
+  }
+  .cta__group {
+    display: flex;
+    flex-flow: column wrap;
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes rotateCircleText {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.ellipse {
+  position: relative;
+  top: -2.75rem;
+  left: 3.6875rem;
+  margin-top: -5rem;
+}
+.ellipse__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.ellipse__text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: auto;
+  width: 100%;
+  animation: rotateCircleText;
+  animation-duration: 30000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  mix-blend-mode: overlay;
+  z-index: 10;
+}
+.ellipse__img {
+  width: 100%;
+  height: auto;
+}
+.ellipse__img-ellipse {
+  transform: scale(1.0328125);
+}
+.ellipse__img-text {
+  transform: none;
+}
+
+@media screen and (max-width: 640px) {
+  .ellipse {
+    width: 18.5625rem;
+    height: 18.5625rem;
+    top: 0;
+    left: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .ellipse {
+    top: 0;
+    left: 0;
+    margin: -5rem auto;
+  }
+  .ellipse__img {
+    width: 90%;
+  }
+}
+.event__heading {
+  max-width: 42rem;
+  margin-bottom: 3.75rem;
+  font-family: "Merriweather";
+  font-size: 2.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.35;
+  text-align: left;
+}
+.event__subheading {
+  font-family: "Merriweather";
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: inherit;
+  text-transform: uppercase;
+  color: #F54932;
+}
+.event__wrapper {
+  display: flex;
+  margin-top: 1.75rem;
+}
+.event__table {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  flex-basis: 44rem;
+}
+.event__list {
+  border-color: #e5e7eb;
+  font-family: "GolosText", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+.event__item {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 1rem;
+  text-align: left;
+}
+.event__item_top {
+  border-top: 2px solid #e5e7eb;
+}
+.event__item:last-child > .event__info {
+  padding-bottom: 0;
+}
+.event__item:last-child > .event__name {
+  padding-bottom: 0;
+}
+.event__item:first-child > .event__info {
+  padding-top: 0;
+}
+.event__item:first-child > .event__name {
+  padding-top: 0;
+}
+.event__name {
+  padding: 1rem 0 1rem 0;
+  font-weight: 400;
+  color: rgba(49, 49, 49, 0.7);
+}
+.event__info {
+  padding: 1rem 0 1rem 1rem;
+  font-weight: 600;
+  color: #313131;
+  border-left: 2px solid #e5e7eb;
+  grid-column: 2/2;
+}
+.event__info_extra {
+  text-decoration: line-through;
+  text-decoration-color: #F54932;
+}
+.event__img-wrapper {
+  display: flex;
+  position: relative;
+  flex-basis: 474px;
+  height: 527px;
+  margin-right: 2.75rem;
+}
+.event__bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/desktop/chess-player.png");
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  background-color: #ffffff;
+  resize: both;
+  z-index: 10;
+}
+.event__bg-img-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/desktop/bg_chess_player_desktop.png");
+  background-repeat: no-repeat;
+  mix-blend-mode: color-burn;
+  resize: both;
+  z-index: 5;
+}
+.event__footer {
+  margin-top: 3rem;
+  font-family: "GolosText", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #3057A2;
+  text-align: left;
+}
+
+@media screen and (max-width: 640px) {
+  .event__wrapper {
+    flex-direction: column;
+  }
+  .event__img-wrapper {
+    flex-basis: 374px;
+    height: 420px;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .event__bg-img {
+    background-position: center;
+    background-size: cover;
+  }
+  .event__bg-img-mask {
+    background-position: center;
+    background-size: cover;
+  }
+  .event__heading {
+    max-width: 100%;
+    margin-bottom: 2.75rem;
+  }
+  .event__item {
+    display: block;
+  }
+  .event__item:first-child > .event__info {
+    padding-top: 0.75rem;
+  }
+  .event__name, .event__info {
+    display: block;
+  }
+  .event__name {
+    padding-bottom: 0;
+  }
+  .event__info {
+    border-left-width: 0;
+    padding-left: 0;
+    padding-top: 0.75rem;
+  }
+  .event__footer {
+    margin-top: 2.5rem;
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .event__wrapper {
+    flex-direction: column;
+  }
+  .event__img-wrapper {
+    width: 100%;
+    height: 474px;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .event__bg-img {
+    background-size: contain;
+  }
+  .event__bg-img-mask {
+    background-size: contain;
+  }
+  .event__heading {
+    max-width: 100%;
+  }
+  .event__table {
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+}
+.grid__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.grid__inner {
+  display: grid;
+  grid-template-rows: 112px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.grid__heading {
+  max-width: calc((100% - 1.25rem) / 3 * 2);
+  margin-bottom: 3.375rem;
+  width: auto;
+  font-family: "Merriweather";
+  font-size: 3.375rem;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: left;
+  text-transform: uppercase;
+}
+.grid__heading:after {
+  position: relative;
+  content: "Будущие источники обогащения васюкинцев";
+  display: inline-block;
+  max-width: 280px;
+  word-break: break-word;
+  margin-left: 1rem;
+  text-transform: none;
+  font-family: "GolosText", sans-serif;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #3057A2;
+}
+.grid__text {
+  margin-left: 1rem;
+  font-family: "GolosText", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.2;
+}
+.grid__item {
+  position: relative;
+  background-image: url("../../assets/common/CooperUnionStampPaper.png"), url("../../assets/common/bg.png");
+  padding: 1.25rem 1.25rem 1.25rem 3.5rem;
+}
+.grid__item[data-id="3"] {
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+}
+.grid__item[data-id="7"] {
+  display: flex;
+  grid-template-columns: subgrid;
+  grid-column: span 2/span 4;
+}
+.grid__item[data-id="7"] .grid__text {
+  max-width: 446px;
+}
+.grid__item:before {
+  position: absolute;
+  left: 1.25rem;
+  top: 1.25rem;
+  content: attr(data-id);
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  font-size: 1.25rem;
+  font-family: "GolosText", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.grid__illustration {
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+  width: 376px;
+  height: 140px;
+}
+.grid__image {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  top: -60%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .grid__wrapper {
+    display: none;
+  }
+}
+.logo {
+  position: relative;
+  height: 2.25rem;
+  text-align: left;
+}
+.logo__link {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  margin-top: 0;
+  margin-right: auto;
+}
+.logo__img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 640px) {
+  .logo {
+    height: 2rem;
+  }
+}
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes rotateCircleText {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.marquee {
+  display: flex;
+  flex-direction: row;
+  line-height: 1.1;
+  text-transform: uppercase;
+  overflow: hidden;
+  background-color: #F54932;
+}
+.marquee:hover > .marquee__row {
+  animation-play-state: paused;
+}
+.marquee__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-shrink: 0;
+  animation: marquee;
+  animation-duration: 15000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.marquee__item {
+  width: auto;
+  padding: 1.125rem 0.75rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+.marquee__separator {
+  width: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.marquee__text {
+  font-size: 1.375rem;
+  font-family: "Merriweather";
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__row {
+    animation: none;
+    -webkit-animation: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .marquee__item {
+    padding: 0.625rem 0.75rem;
+  }
+  .marquee__text {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
