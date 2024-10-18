@@ -9,6 +9,8 @@ $circle-animation-duration: 30000ms;
   top: -2.75rem;
   left: 7.25rem;
   margin-top: -5rem;
+  transform-origin: bottom center;
+  animation: spin 15s linear forwards;
 
   &__wrapper {
     position: relative;
@@ -44,6 +46,7 @@ $circle-animation-duration: 30000ms;
   }
 
 }
+
 
 @media screen and (max-width: 640px) {
   .ellipse {

@@ -453,6 +453,7 @@ body {
   background-position: 73.5% 100%;
   background-size: 13% auto;
   resize: both;
+  animation: fadeInUp 2s ease-in forwards;
   z-index: 40;
 }
 .header__pawn {
@@ -465,6 +466,7 @@ body {
   background-position: 96% 100%;
   background-size: 5% auto;
   resize: both;
+  animation: fadeInUp 2s ease-in forwards;
   z-index: 40;
 }
 .header__queen {
@@ -477,6 +479,7 @@ body {
   background-position: 88.5% 100%;
   background-size: 10% auto;
   resize: both;
+  animation: fadeInUp 2.5s ease-in forwards;
   z-index: 20;
 }
 .header__king {
@@ -489,6 +492,7 @@ body {
   background-position: 62.5% 100%;
   background-size: 10% auto;
   resize: both;
+  animation: fadeInUp 2.5s ease-in forwards;
   z-index: 20;
 }
 
@@ -1118,6 +1122,24 @@ body {
     flex-flow: column wrap;
   }
 }
+@keyframes spin {
+  from {
+    transform: rotate(-130deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 @keyframes marquee {
   from {
     transform: translate3d(0, 0, 0);
@@ -1139,6 +1161,8 @@ body {
   top: -2.75rem;
   left: 7.25rem;
   margin-top: -5rem;
+  transform-origin: bottom center;
+  animation: spin 15s linear forwards;
 }
 .ellipse__wrapper {
   position: relative;
@@ -1491,6 +1515,24 @@ body {
 @media screen and (max-width: 640px) {
   .logo {
     height: 2rem;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(-130deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 @keyframes marquee {
