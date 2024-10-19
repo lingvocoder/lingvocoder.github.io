@@ -321,7 +321,6 @@ html, body {
   text-align: center;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   font-variant-ligatures: none;
 }
 
@@ -1416,7 +1415,6 @@ body {
   content: "Будущие источники обогащения васюкинцев";
   display: inline-block;
   max-width: 280px;
-  word-break: break-word;
   margin-left: 1rem;
   text-transform: none;
   font-family: "GolosText", sans-serif;
