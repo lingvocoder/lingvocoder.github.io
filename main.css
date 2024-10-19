@@ -453,7 +453,7 @@ body {
   background-position: 73.5% 100%;
   background-size: 13% auto;
   resize: both;
-  animation: fadeInUp 3s ease-in 0.5s forwards;
+  animation: fadeInUp 3s ease-in forwards;
   z-index: 40;
 }
 .header__pawn {
@@ -466,7 +466,7 @@ body {
   background-position: 96% 100%;
   background-size: 5% auto;
   resize: both;
-  animation: fadeInUp 3s ease-in 0.5s forwards;
+  animation: fadeInUp 3s ease-in forwards;
   z-index: 40;
 }
 .header__queen {
