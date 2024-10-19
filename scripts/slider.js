@@ -10,8 +10,8 @@ class Carousel {
     }
 
     initCarousel() {
-        this.carousel = document.querySelector('.carousel');
-        this.slidesTotal = this.carousel.querySelectorAll('.carousel__slide').length;
+        this.carousel = document.querySelector('#carousel');
+        this.slidesTotal = this.carousel.querySelectorAll('.slide').length;
         this.checkEdgeSlides();
     }
 
@@ -40,7 +40,7 @@ class Carousel {
 
     calculateDistance = () => {
         const carouselContainer = this.carousel.querySelector('.carousel__container');
-        const slide = carouselContainer.querySelector('.carousel__slide');
+        const slide = carouselContainer.querySelector('.slide');
         const containerGap = parseFloat(window.getComputedStyle(carouselContainer).gap);
         const slideWidth = parseFloat(window.getComputedStyle(slide).width);
         return (-this.counter + 1) * (slideWidth + containerGap);

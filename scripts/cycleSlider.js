@@ -15,7 +15,7 @@ class InfiniteCarousel {
     }
 
     initCarousel() {
-        this.carousel = document.querySelector('.inf-carousel');
+        this.carousel = document.querySelector('#infiniteCarousel');
         this.slidesTotal = this.carousel.querySelectorAll('.slide').length;
         this.initAutoPlay(this.autoPlayInterval);
         this.checkEdgeSlides();
@@ -57,7 +57,7 @@ class InfiniteCarousel {
     updateCounter = () => {
         const carouselContainer = this.carousel.querySelector('.inf-carousel__container');
         let [curr, total] = this.carousel.querySelector('.controls__counter').children;
-        let {id} = carouselContainer.children[this.counter - 1].dataset;
+        let {id} = carouselContainer.children[this.counter - 1]?.dataset;
         curr.textContent = id;
         total.textContent = ` / ${this.slidesTotal}`;
     }

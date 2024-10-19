@@ -46,7 +46,7 @@ $header-height-sm: 50.75rem;
     background-position: 73.5% 100%;
     background-size: 13% auto;
     resize: both;
-    animation: fadeInUp 2s ease-in forwards;
+    animation: fadeInUp 3s ease-in 0.5s forwards;
     z-index: 40;
   }
 
@@ -60,7 +60,7 @@ $header-height-sm: 50.75rem;
     background-position: 96% 100%;
     background-size: 5% auto;
     resize: both;
-    animation: fadeInUp 2s ease-in forwards;
+    animation: fadeInUp 3s ease-in 0.5s forwards;
     z-index: 40;
   }
 
@@ -74,7 +74,7 @@ $header-height-sm: 50.75rem;
     background-position: 88.5% 100%;
     background-size: 10% auto;
     resize: both;
-    animation: fadeInUp 2.5s ease-in forwards;
+    animation: fadeInUp 4s ease-in 0.5s forwards;
     z-index: 20;
   }
 
@@ -88,7 +88,7 @@ $header-height-sm: 50.75rem;
     background-position: 62.5% 100%;
     background-size: 10% auto;
     resize: both;
-    animation: fadeInUp 2.5s ease-in forwards;
+    animation: fadeInUp 4s ease-in 0.5s forwards;
     z-index: 20;
   }
 }

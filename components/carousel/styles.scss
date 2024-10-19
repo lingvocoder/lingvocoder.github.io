@@ -9,8 +9,6 @@ $carousel-max-w-sm: 20.9375rem;
 $carousel-max-w-md: 26.25rem;
 $carousel-wrapper-mt: 9.25rem;
 
-$counter-height: 2.25rem;
-$text-left-offset: 1rem;
 $transition-duration: 450ms;
 
 .carousel {
@@ -56,56 +54,6 @@ $transition-duration: 450ms;
     list-style: none;
     transition: transform $transition-duration cubic-bezier(0.4, 0, 1, 1) 0s;
     will-change: transform;
-  }
-
-  &__slide {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex-shrink: 0;
-    padding: 3rem 1.25rem 1.25rem 1.25rem;
-    background-image: url("../../assets/common/CooperUnionStampPaper_tall.png"), url("../../assets/desktop/bg_chess_player_desktop.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  &__slot {
-    position: relative;
-    padding-left: calc($counter-height + $text-left-offset);
-    padding-top: 0.875rem;
-    padding-bottom: 0.875rem;
-
-    &:before {
-      position: absolute;
-      width: 2.25rem;
-      height: 2.25rem;
-      top: 0.875rem;
-      left: 0;
-      content: attr(data-slot-id);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font: {
-        family: $main-font;
-        weight: 600;
-        size: setFontSizeRem($rf-size, 20);
-      };
-      line-height: 1.2;
-      border-radius: 9999px;
-      background-color: #ffffff;
-    }
-  }
-
-  &__text {
-    font: {
-      family: $main-font;
-      size: setFontSizeRem($rf-size, 18);
-      weight: 500;
-    };
-    text-align: left;
-    line-height: 1.2;
   }
 
   &__banner {

@@ -453,7 +453,7 @@ body {
   background-position: 73.5% 100%;
   background-size: 13% auto;
   resize: both;
-  animation: fadeInUp 2s ease-in forwards;
+  animation: fadeInUp 3s ease-in 0.5s forwards;
   z-index: 40;
 }
 .header__pawn {
@@ -466,7 +466,7 @@ body {
   background-position: 96% 100%;
   background-size: 5% auto;
   resize: both;
-  animation: fadeInUp 2s ease-in forwards;
+  animation: fadeInUp 3s ease-in 0.5s forwards;
   z-index: 40;
 }
 .header__queen {
@@ -479,7 +479,7 @@ body {
   background-position: 88.5% 100%;
   background-size: 10% auto;
   resize: both;
-  animation: fadeInUp 2.5s ease-in forwards;
+  animation: fadeInUp 4s ease-in 0.5s forwards;
   z-index: 20;
 }
 .header__king {
@@ -492,7 +492,7 @@ body {
   background-position: 62.5% 100%;
   background-size: 10% auto;
   resize: both;
-  animation: fadeInUp 2.5s ease-in forwards;
+  animation: fadeInUp 4s ease-in 0.5s forwards;
   z-index: 20;
 }
 
@@ -731,7 +731,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-basis: calc((100% - 1.25rem * (var(--carousel-visible-slides) - 1)) / var(--carousel-visible-slides));
+  flex-basis: calc((100% - 1.25rem * (var(--carousel-visible-slides, 1) - 1)) / var(--carousel-visible-slides, 1));
   flex-shrink: 0;
 }
 .slide__img {
@@ -778,6 +778,44 @@ body {
 .slide__btn:hover {
   background-color: #3057A2;
   color: #ffffff;
+}
+.slide__bg-img {
+  padding: 3rem 1.25rem 1.5rem 1.25rem;
+  align-items: flex-start;
+  background-image: url("../../assets/common/CooperUnionStampPaper_tall.png"), url("../../assets/desktop/bg_chess_player_desktop.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide__slot {
+  position: relative;
+  padding-left: 3.25rem;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+.slide__slot:before {
+  position: absolute;
+  width: 2.25rem;
+  height: 2.25rem;
+  top: 0.875rem;
+  left: 0;
+  content: attr(data-slot-id);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "GolosText", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  border-radius: 9999px;
+  background-color: #ffffff;
+}
+.slide__text {
+  font-family: "GolosText", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.2;
 }
 
 @media screen and (max-width: 640px) {
@@ -832,48 +870,6 @@ body {
   list-style: none;
   transition: transform 450ms cubic-bezier(0.4, 0, 1, 1) 0s;
   will-change: transform;
-}
-.carousel__slide {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex-shrink: 0;
-  padding: 3rem 1.25rem 1.25rem 1.25rem;
-  background-image: url("../../assets/common/CooperUnionStampPaper_tall.png"), url("../../assets/desktop/bg_chess_player_desktop.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.carousel__slot {
-  position: relative;
-  padding-left: 3.25rem;
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
-}
-.carousel__slot:before {
-  position: absolute;
-  width: 2.25rem;
-  height: 2.25rem;
-  top: 0.875rem;
-  left: 0;
-  content: attr(data-slot-id);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "GolosText", sans-serif;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  border-radius: 9999px;
-  background-color: #ffffff;
-}
-.carousel__text {
-  font-family: "GolosText", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 500;
-  text-align: left;
-  line-height: 1.2;
 }
 .carousel__banner {
   position: absolute;
